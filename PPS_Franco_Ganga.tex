@@ -1,8 +1,12 @@
 \documentclass{article}
-\usepackage{biblatex}
 \usepackage{indentfirst}
-\usepackage{quotchap}
+\usepackage[backend=biber]{biblatex}
+\usepackage{graphicx}
 \addbibresource{bibliografia.bib}
+\usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false, labelfont=bf}
+
+
 
 \author{Franco Ganga}
 \title{Proyecto\ RUDA:\ Registro\ unificado\ de\ actividades}
@@ -18,6 +22,9 @@
 
 
 \setlength{\parindent}{0.75cm}
+
+\renewcommand{\figurename}{Imagen}
+
 \begin{document}
 \maketitle
 
@@ -115,26 +122,35 @@ A continuación se listan las librerías a utilizar para el desarrollo:
 \section{Desarrollo}%
 \label{sec:desarrollo}
 
-\subsubsection{Aporte al proyecto}%
+\subsection{Aporte al proyecto}%
 \label{ssub:aporte_al_proyecto}
 Este proyecto se desarrolló en conjunto con otros alumnos de la universidad, por lo tanto a continuación se lista mi aporte:
 
 \input{tareas_desarrolladas}
 
-\subsubsection{Introduccion Symfony}%
+\subsection{Introduccion Symfony}%
 \label{ssub:introduccion_symfony}
-Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo la licencia MIT Open Source y hoy se encuentra entre los principales \textit{frameworks} disponibles para el desarrollo de PHP.\cite{symfony-def}
+Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo la licencia MIT Open Source y hoy se encuentra entre los principales \textit{frameworks} disponibles para el desarrollo de PHP. \textcite{symfony-def}
 \begin{aquote}{Sitio web de Symfony}
 Symfony es un conjunto de componentes PHP, un \textit{framework} de aplicación web, una filosofía y una comunidad, todos trabajando juntos en armonía.
 \end{aquote}
 Un proyecto Symfony está conformado por varios componentes que proveen funciones básicas para una aplicación web. Entender el funcionamiento de cada uno de ellos es necesario para una buena implementación. Para el desarrollo se utilizaron los siguientes componentes de Symfony:
 
 
-
 \begin{itemize}
     \input{symfony_componentes}
 \end{itemize}
+\newpage
+\subsection{Modelado}%
+\label{sub:modelado}
+Se modeló el siguiente esquema de acuerdo a la información recibida por parte del Área de informática de la universidad. Además, se pensó en utilizar herencia para la definición de las actividades, de esta manera cada cargo o actividad en particular heredaría toda característica común de una entidad padre.
+% TODO   franco crear una funcion para las imagenes lun 28 oct 2019 14:06:29 -03
+\begin{figure}[h]
+    \includegraphics[width=1.2\linewidth]{image/actividad-herencia1.png}
+    \caption{image/actividad-Herencia1\newline \textbf{Fuente:} Elaboración propia}%
+    \label{fig:image/actividad-herencia1}
+\end{figure}
 
-\bibliographystyle{unsrt}
 \printbibliography
+
 \end{document}
