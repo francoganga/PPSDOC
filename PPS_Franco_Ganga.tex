@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{biblatex}
+\usepackage{indentfirst}
+\usepackage{quotchap}
+\addbibresource{bibliografia.bib}
+
+\author{Franco Ganga}
+\title{Proyecto\ RUDA:\ Registro\ unificado\ de\ actividades}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
+
+\setlength{\parindent}{0.75cm}
+\begin{document}
+\maketitle
+
+\section{Introduccion}%
+\label{sec:introduccion}
+
+\subsection{Resumen}%
+\label{sub:resumen}
+
+El presente trabajo expondrá el desarrollo de un proyecto a realizarse en la Universidad Nacional Arturo Jauretche, el cual consistirá en la elaboración de un sistema informático para el registro de datos\@. El mismo tendrá como finalidad la consolidación de conocimientos adoptados en la carrera y requerirá de la capacidad de análisis e investigación para adaptarse a los estándares y herramientas utilizadas por la Dirección de informática de la institución.
+
+\subsection{Objetivos}%
+\label{sub:objetivos}
+
+
+El objetivo general de este proyecto es el desarrollo de un sistema que permita el registro de datos sobre las actividades realizadas por los integrantes de la institución. El mismo almacenará datos de proyectos de investigación, publicaciones, voluntariados, etc.
+
+Actualmente la universidad no cuenta con una plataforma establecida para el registro de esta información, sólo se dispone de los datos de las personas que integran la institución. Estos datos están distribuidos en dos sistemas:
+\begin{itemize}
+    \item \textbf{SIU-Mapuche:} Sistema de RRHH de la Universidad, cuenta con toda la información relevante al personal (docente y no-docente) y a los cargos.
+    \item \textbf{SIU-Guaraní:} Sistema Académico de la Universidad, aquí es donde se encuentran los datos de alumnos, institutos, materias, comisiones, carreras, etc.
+\end{itemize}
+
+El uso de estos sistemas como fuente de información, y su integración con la plataforma RUDA, permitirá saber en qué actividades está o estuvo involucrada determinada persona en la institución. Se desarrollará una interfaz web para el acceso a los datos, para lo cual será necesario poder relacionar la información en los sistemas fuente con la de RUDA\@. Además, se implementará un servicio REST, que permitirá acceder fácilmente a los datos.
+
+Este proyecto está pensado para ser utilizado por las siguientes áreas:
+\begin{itemize}
+    \item Centro de Política Educativa
+    \item Centro de Política y Territorio
+    \item Secretaría Económico Financiera
+\end{itemize}
+
+
+\subsubsection{Objetivos especificos}%
+\label{ssub:objetivos_especificos}
+
+Para llevar adelante el mencionado proyecto, se pretenden alcanzar los siguientes objetivos específicos:
+
+\begin{itemize}
+    \item \textbf{Modelado de datos y creación de base de datos:} Se debe modelar la estructura de los datos a almacenar en el sistema.
+    \item \textbf{ABMs para interfaz de usuario:} Se Desarrollará una interfaz de usuario que permita la manipulación de los datos de cada actividad\@. Aquí se presentará la información de cada persona y sus actividades.
+    \item \textbf{Desarrollo de la integración con los sistemas fuentes de información:} El mayor aporte a este objetivo será por parte del Área de sistemas de la universidad, ya que será necesario manejar información sensible.
+    \item \textbf{Creación de una API REST para la obtención de los datos:} Se desarrollará un servicio web que facilite la manipulación de datos a través de internet. Esto brindará a la universidad la capacidad de reutilizar esta fuente de datos en futuros proyectos.
+\end{itemize}
+
+\subsection{Tareas}%
+\label{sub:tareas}
+A continuación, se detallarán las tareas por ejecutar en vistas al cumplimiento de los objetivos previamente definidos:
+
+\subsubsection{Modelado conceptual de datos}%
+\label{ssub:modelado_conceptual_de_datos}
+Se definirá el modelado de datos a implementar basándose en los datos que se requieren almacenar y como están relacionados.
+
+\subsubsection{Creación de la base de datos}%
+\label{ssub:creación_de_la_base_de_datos}
+
+Entidades a desarrollar que almacenarán datos  sobre la duración de cada actividad:
+
+\begin{itemize}
+    \input{entidades}
+\end{itemize}
+
+\subsubsection{Definición de ABMs}%
+\label{ssub:definición_de_abms}
+
+
+Una ABM permite al usuario interactuar con los datos, por esto es que se deberá definir cada una en particular:
+
+\begin{itemize}
+    \input{lista_abm}
+\end{itemize}
+\ \\No relacionadas a la política de la institución:
+\begin{itemize}
+    \input{lista_abm_nopoliticas}
+\end{itemize}
+
+\subsubsection{Desarrollo de API }%
+\label{ssub:desarrollo_de_api_}
+Para este desarrollo se generarán rutas mediante las cuales se podrá acceder a la misma información detallada en la tarea anterior.
+
+\begin{itemize}
+    \item \textbf{Implementación de nodos para obtener cada dato:} cada dato debe ser accesible mediante una petición http.
+    \item \textbf{Implementación de autenticación del servicio}
+\end{itemize}
+
+\subsubsection{Instalación y configuración de librerias}%
+\label{ssub:instalación_y_configuración_de_librerias}
+Se deberá configurar cada librería de acuerdo a las necesidades del sistema.
+A continuación se listan las librerías a utilizar para el desarrollo:
+
+\begin{itemize}
+    \input{librerias}
+\end{itemize}
+
+\section{Desarrollo}%
+\label{sec:desarrollo}
+
+\subsubsection{Aporte al proyecto}%
+\label{ssub:aporte_al_proyecto}
+Este proyecto se desarrolló en conjunto con otros alumnos de la universidad, por lo tanto a continuación se lista mi aporte:
+
+\input{tareas_desarrolladas}
+
+\subsubsection{Introduccion Symfony}%
+\label{ssub:introduccion_symfony}
+Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo la licencia MIT Open Source y hoy se encuentra entre los principales \textit{frameworks} disponibles para el desarrollo de PHP.\cite{symfony-def}
+\begin{aquote}{Sitio web de Symfony}
+Symfony es un conjunto de componentes PHP, un \textit{framework} de aplicación web, una filosofía y una comunidad, todos trabajando juntos en armonía.
+\end{aquote}
+Un proyecto Symfony está conformado por varios componentes que proveen funciones básicas para una aplicación web. Entender el funcionamiento de cada uno de ellos es necesario para una buena implementación. Para el desarrollo se utilizaron los siguientes componentes de Symfony:
+
+
+
+\begin{itemize}
+    \input{symfony_componentes}
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\printbibliography
+\end{document}
