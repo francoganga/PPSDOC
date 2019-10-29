@@ -4,7 +4,14 @@
 \usepackage{graphicx}
 \addbibresource{bibliografia.bib}
 \usepackage{caption}
-\captionsetup{justification=raggedright,singlelinecheck=false, labelfont=bf}
+\captionsetup{
+    justification=raggedright,singlelinecheck=false, labelfont=bf
+}
+\usepackage{hyperref}
+\hypersetup{
+    urlcolor=blue,
+    colorlinks=true
+}
 
 
 
@@ -23,6 +30,8 @@
 
 \setlength{\parindent}{0.75cm}
 
+
+
 \renewcommand{\figurename}{Imagen}
 
 \begin{document}
@@ -34,21 +43,31 @@
 \subsection{Resumen}%
 \label{sub:resumen}
 
-El presente trabajo expondrá el desarrollo de un proyecto a realizarse en la Universidad Nacional Arturo Jauretche, el cual consistirá en la elaboración de un sistema informático para el registro de datos\@. El mismo tendrá como finalidad la consolidación de conocimientos adoptados en la carrera y requerirá de la capacidad de análisis e investigación para adaptarse a los estándares y herramientas utilizadas por la Dirección de informática de la institución.
+El presente trabajo expondrá el desarrollo de un proyecto a realizarse en la Universidad Nacional Arturo Jauretche, el cual
+consistirá en la elaboración de un sistema informático para el registro de datos\@. El mismo tendrá como finalidad la consolidación
+de conocimientos adoptados en la carrera y requerirá de la capacidad de análisis e investigación para adaptarse a los estándares
+y herramientas utilizadas por la Dirección de informática de la institución.
 
 \subsection{Objetivos}%
 \label{sub:objetivos}
 
 
-El objetivo general de este proyecto es el desarrollo de un sistema que permita el registro de datos sobre las actividades realizadas por los integrantes de la institución. El mismo almacenará datos de proyectos de investigación, publicaciones, voluntariados, etc.
+El objetivo general de este proyecto es el desarrollo de un sistema que permita el registro de datos sobre las actividades
+realizadas por los integrantes de la institución. El mismo almacenará datos de proyectos de investigación, publicaciones, voluntariados, etc.
 
-Actualmente la universidad no cuenta con una plataforma establecida para el registro de esta información, sólo se dispone de los datos de las personas que integran la institución. Estos datos están distribuidos en dos sistemas:
+Actualmente la universidad no cuenta con una plataforma establecida para el registro de esta información, sólo se dispone de
+los datos de las personas que integran la institución. Estos datos están distribuidos en dos sistemas:
 \begin{itemize}
-    \item \textbf{SIU-Mapuche:} Sistema de RRHH de la Universidad, cuenta con toda la información relevante al personal (docente y no-docente) y a los cargos.
-    \item \textbf{SIU-Guaraní:} Sistema Académico de la Universidad, aquí es donde se encuentran los datos de alumnos, institutos, materias, comisiones, carreras, etc.
+    \item \textbf{SIU-Mapuche:} Sistema de RRHH de la Universidad, cuenta con toda la información relevante al personal (docente
+        y no-docente) y a los cargos.
+    \item \textbf{SIU-Guaraní:} Sistema Académico de la Universidad, aquí es donde se encuentran los datos de alumnos, institutos
+        , materias, comisiones, carreras, etc.
 \end{itemize}
 
-El uso de estos sistemas como fuente de información, y su integración con la plataforma RUDA, permitirá saber en qué actividades está o estuvo involucrada determinada persona en la institución. Se desarrollará una interfaz web para el acceso a los datos, para lo cual será necesario poder relacionar la información en los sistemas fuente con la de RUDA\@. Además, se implementará un servicio REST, que permitirá acceder fácilmente a los datos.
+El uso de estos sistemas como fuente de información, y su integración con la plataforma RUDA, permitirá saber en qué actividades
+está o estuvo involucrada determinada persona en la institución. Se desarrollará una interfaz web para el acceso a los datos
+, para lo cual será necesario poder relacionar la información en los sistemas fuente con la de RUDA\@. Además, se implementará
+un servicio REST, que permitirá acceder fácilmente a los datos.
 
 Este proyecto está pensado para ser utilizado por las siguientes áreas:
 \begin{itemize}
@@ -65,9 +84,12 @@ Para llevar adelante el mencionado proyecto, se pretenden alcanzar los siguiente
 
 \begin{itemize}
     \item \textbf{Modelado de datos y creación de base de datos:} Se debe modelar la estructura de los datos a almacenar en el sistema.
-    \item \textbf{ABMs para interfaz de usuario:} Se Desarrollará una interfaz de usuario que permita la manipulación de los datos de cada actividad\@. Aquí se presentará la información de cada persona y sus actividades.
-    \item \textbf{Desarrollo de la integración con los sistemas fuentes de información:} El mayor aporte a este objetivo será por parte del Área de sistemas de la universidad, ya que será necesario manejar información sensible.
-    \item \textbf{Creación de una API REST para la obtención de los datos:} Se desarrollará un servicio web que facilite la manipulación de datos a través de internet. Esto brindará a la universidad la capacidad de reutilizar esta fuente de datos en futuros proyectos.
+    \item \textbf{ABMs para interfaz de usuario:} Se Desarrollará una interfaz de usuario que permita la manipulación de los
+        datos de cada actividad\@. Aquí se presentará la información de cada persona y sus actividades.
+    \item \textbf{Desarrollo de la integración con los sistemas fuentes de información:} El mayor aporte a este objetivo será
+        por parte del Área de sistemas de la universidad, ya que será necesario manejar información sensible.
+    \item \textbf{Creación de una API REST para la obtención de los datos:} Se desarrollará un servicio web que facilite la
+        manipulación de datos a través de internet. Esto brindará a la universidad la capacidad de reutilizar esta fuente de datos en futuros proyectos.
 \end{itemize}
 
 \subsection{Tareas}%
@@ -130,11 +152,14 @@ Este proyecto se desarrolló en conjunto con otros alumnos de la universidad, po
 
 \subsection{Introduccion Symfony}%
 \label{ssub:introduccion_symfony}
-Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo la licencia MIT Open Source y hoy se encuentra entre los principales \textit{frameworks} disponibles para el desarrollo de PHP. \textcite{symfony-def}
+Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la
+agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo
+la licencia MIT Open Source y hoy se encuentra entre los principales \textit{frameworks} disponibles para el desarrollo de PHP. \textcite{symfony-def}
 \begin{aquote}{Sitio web de Symfony}
 Symfony es un conjunto de componentes PHP, un \textit{framework} de aplicación web, una filosofía y una comunidad, todos trabajando juntos en armonía.
 \end{aquote}
-Un proyecto Symfony está conformado por varios componentes que proveen funciones básicas para una aplicación web. Entender el funcionamiento de cada uno de ellos es necesario para una buena implementación. Para el desarrollo se utilizaron los siguientes componentes de Symfony:
+Un proyecto Symfony está conformado por varios componentes que proveen funciones básicas para una aplicación web. Entender
+el funcionamiento de cada uno de ellos es necesario para una buena implementación. Para el desarrollo se utilizaron los siguientes componentes de Symfony:
 
 
 \begin{itemize}
@@ -143,14 +168,41 @@ Un proyecto Symfony está conformado por varios componentes que proveen funcione
 \newpage
 \subsection{Modelado}%
 \label{sub:modelado}
-Se modeló el siguiente esquema de acuerdo a la información recibida por parte del Área de informática de la universidad. Además, se pensó en utilizar herencia para la definición de las actividades, de esta manera cada cargo o actividad en particular heredaría toda característica común de una entidad padre.
-% TODO   franco crear una funcion para las imagenes lun 28 oct 2019 14:06:29 -03
+
+
+\subsubsection{Introducción Doctrine}%
+\label{ssub:introducción_doctrine}
+Con Doctrine, cada objeto PHP que se requiera persistir a la base de datos, necesita estar definido en un archivo PHP que
+contiene información referente a tipos de dato y relaciones entre entidades. A este archivo se lo denomina entidad.
+
 \begin{figure}[h]
-    \includegraphics[width=1.2\linewidth]{image/actividad-herencia1.png}
-    \caption{image/actividad-Herencia1\newline \textbf{Fuente:} Elaboración propia}%
+    \includegraphics[scale=1]{image/entidad-doctrine.png}
+    \caption{Ejemplo básico de una entidad.\newline \textbf{Fuente:} Recuperado de \href{https://www.doctrine-project.org/
+    projects/doctrine-orm/en/2.6/reference/basic-mapping.html}{Documentación de Doctrine}}%
+    \label{fig:image/entidad-doctrine}
+\end{figure}
+En \textbf{Doctrine} existen dos tipos de mapeo de relaciones, bi-direccionales y uni-direccionales\@.
+Además, cada  relación tiene un lado propietario, que es utilizado por \textbf{Doctrine} para comprobar si existen cambios en los datos.
+Una relación bi-direccional permite
+Al trabajar con relaciones, se debe tener en cuenta la manera en que Doctrine verifica los cambios.
+
+
+
+\subsubsection{Modelado}%
+\label{ssub:modelado}
+Se modeló el siguiente esquema de acuerdo a la información recibida por parte del Área de informática de la universidad\@.
+Además, se pensó en utilizar herencia para la definición de las actividades, de esta manera cada cargo o actividad en particular
+heredaría toda característica común de una entidad padre.
+
+\begin{figure}[h]
+    \includegraphics[scale=1]{image/actividad-modelo.png}
+    \caption{Ejemplo de la definición de un cargo\newline \textbf{Fuente:} Elaboración propia}%
     \label{fig:image/actividad-herencia1}
 \end{figure}
 
+
+
+\newpage
 \printbibliography
 
 \end{document}
