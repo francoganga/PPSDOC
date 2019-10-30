@@ -11,9 +11,11 @@
 \hypersetup{
     urlcolor=blue,
     colorlinks=true,
-    citecolor=blue
+    citecolor=blue,
+    linkcolor=black
 }
 \usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
 
 
 
@@ -102,8 +104,8 @@ A continuación, se detallarán las tareas por ejecutar en vistas al cumplimient
 \label{ssub:modelado_conceptual_de_datos}
 Se definirá el modelado de datos a implementar basándose en los datos que se requieren almacenar y como están relacionados.
 
-\subsubsection{Creación de la base de datos}%
-\label{ssub:creación_de_la_base_de_datos}
+\subsubsection{Creación de la base de datos}
+\label{ssub:creacioDB}
 
 Entidades a desarrollar que almacenarán datos  sobre la duración de cada actividad:
 
@@ -115,8 +117,9 @@ Entidades a desarrollar que almacenarán datos  sobre la duración de cada activ
 \label{ssub:definición_de_abms}
 
 
-Una ABM permite al usuario interactuar con los datos, por esto es que se deberá definir cada una en particular:
+Una ABM permite al usuario interactuar con los datos, por esto es que se deberá definir cada una en particular:\newline
 
+Relacionadas a la política de la institución:
 \begin{itemize}
     \input{lista_abm}
 \end{itemize}
@@ -170,9 +173,10 @@ el funcionamiento de cada uno de ellos es necesario para una buena implementaci�
 \newpage
 \subsection{Modelado}%
 \label{sub:modelado}
+Como se indicó en la definicion de \hyperref[ssub:objetivos_especificos]{\textit{objetivos específicos}}, la integración entre RUDA y los sistemas fuentes de información será implementada por el área de sistemas de la universidad; por lo tanto las entidades definidas durante el desarrollo contienen
+% TODO   franco explicar entidades basicas  mar 29 oct 2019 17:17:06 -03
 
-
-\subsubsection{Introducción Doctrine}%
+\subsubsection{Introducción a Doctrine}%
 \label{ssub:introducción_doctrine}
 Con Doctrine, cada objeto PHP que se requiera persistir a la base de datos, necesita estar definido en un archivo PHP que
 contiene información referente a tipos de dato y relaciones entre entidades. A este archivo se lo denomina entidad.
@@ -235,6 +239,172 @@ Se agregó el la correspondiente metadata de la herencia en Actividad y se optó
     \caption{Mapeo de la columna \textbf{discriminator}\newline \textbf{Fuente:} Elaboración propia, impresión de pantalla del código fuente.}
     \label{fig:image/discr.png}
 \end{figure}
+
+\subsubsection{Miembro de Proyecto}%
+\label{ssub:miembro_de_proyecto_modelo}
+Esta entidad es la cual almacenará datos acerca de la acción de formar parte de un proyecto. Cada dato de la columna \textbf{MiembroProyecto} representará la participación
+de una persona a un proyecto\@.
+Se mapeó la relación entre miembros y proyectos con una cardinalidad de 1-n y, dado que en este tipo de relaciones el lado n toma la clave foránea, el lado propietario termina siendo miembros de proyecto\@.
+Con roles sucede lo mismo, ya que cada instancia de miembro debe poseer un solo rol.
+
+\begin{figure}[h]
+    \includegraphics[width=1\linewidth]{image/mpr-new.png}
+    \caption{Diagrama que representa la relación entre miembro, rol y proyecto\newline \textbf{Fuente:} Elaboración propia utilizando una herramienta online de elaboración de diagramas.}
+    \label{fig:image/mpr-new}
+\end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width=1\linewidth]{image/miembros.png}
+    \caption{Metadata de mapeo de relaciones de miembro de proyecto.\newline \textbf{Fuente:} Elaboración propia.}
+    \label{fig:image/miembros}
+\end{figure}
+
+\subsubsection{Proyecto}%
+\label{ssub:modelo_proyecto}
+En el sistema se necesita representar dos tipos de proyectos, de extensión y de investigación\@. Por ende se decidió agregar herencia para la definición de
+cada proyecto\@. Esto evita tener que crear una nueva entidad para representar los miembros del otro proyecto\@. De la misma forma que con Actividad se utilizó
+herencia de clase.
+
+
+En cuanto a sus relaciones, posee la relación con miembros desde el punto de vista de Proyecto. Con una cardinalidad de n-1 y siendo \textbf{Proyecto} el lado
+inverso de la relación.
+
+Por otro lado, también se definió su relación con \textbf{Roles de Proyecto} con una cardinalidad de n-n.
+
+\subsubsection{Rol de Proyecto}%
+\label{ssub:rol_de_proyecto_modelo}
+Esta entidad representa un rol de proyecto, a cada instancia de miembro se le puede asignar un rol a ejercer en el Proyecto.
+
+Se estableció la relación de roles del tipo n-n, es decir con una cardinalidad de muchos a muchos; ya que un proyecto puede tener muchos roles y además
+un rol puede tener muchos proyectos\@. Como la entidad de roles se actualizará a partir de los proyectos, se definió a Proyecto como dueño o propietario de
+la relación. En el caso de una relación de este tipo el lado propietario es aquel que contiene el parámetro \textbf{inversedBy} en su definición.
+
+\subsection{Definición de ABMs - Clases Admin}%
+\label{sub:definición_de_abms_clases_admin}
+
+Para definir un ABM, es decir una interfaz capaz de manejar el alta, baja y modificación de registros; es necesario una entidad. Por este motivo, para obtener
+una idea general del funcionamiento de Sonata-Admin, se decidió definir algunas entidades y generar una clase admin\@.
+En sonata admin, una clase admin es aquella que, dada una entidad, permite añadir un servicio en la plataforma web sonata que se hace cargo de cada una de estas funciones.
+
+Para crear un admin es necesario extender de la clase \textbf{AbstractAdmin} que provee sonata y, mediante métodos heredados de la misma, configurar la manera en
+que se muestra la información\@.
+Alguno de estos métodos son:
+
+\begin{itemize}
+    \item \textit{configureFormFields:} Este método define los campos a mostrarse durante la acción de crear y editar.
+    \item \textit{configureListFields:} Define los campos a mostrar durante la acción de listar datos.
+    \item \textit{configureShowFields:} Establece la información a mostrar durante la acción de Ver una entrada.
+\end{itemize}
+
+\noindent
+Además de esto, una clase admin en \textbf{Sonata} permite:
+\begin{itemize}
+    \item Validar información
+    \item Agregar acciones de acuerdo a eventos de cada entidad
+    \item Establecer jerarquías entre clases admin
+    \item Crear un menú de forma fácil en las vistas del admin
+    \item Establecer filtros de búsqueda.
+\end{itemize}
+
+Éstas son las funcionalidades que se utilizaron en este proyecto, sonata cuenta con aún más opciones de configuración.
+
+Una clase admin contiene una referencia a la entidad base del mismo a través de un objeto denominado Subject. Sonata utiliza este objeto para realizar
+la mayoría de sus operaciones.
+Para configurar las diferentes secciones del admin, es necesario especificar la información que se desea incluir, esto es posible utilizando el nombre del campo.
+
+\begin{figure}[h]
+    \includegraphics[width=1\linewidth]{image/show.png}
+    \caption{Ejemplo de definición de campos a mostrar durante la creación/edición.\newline \textbf{Fuente:} Elaboración propia.}
+    \label{fig:image/show}
+\end{figure}
+
+Si se desea acceder a asociaciones, (datos que representan la relación de una entidad) se puede hacerlo mediante una notación de puntos, por ejemplo:
+Si se tiene una instancia de \textbf{Actividad}, la misma tendrá una asociación con una entidad persona. Por lo tanto se puede acceder al nombre de una persona referenciándola como ``persona.nombre''.
+
+\subsubsection{Proyecto}%
+\label{ssub:admin_proyectadmin_proyecto}
+
+En el admin de Proyecto se agregaron los siguientes campos en cada acción:
+
+\begin{itemize}
+    \item Lista: nombre del proyecto.
+    \item Ver: nombre del proyecto
+    \item Inserción: nombre y roles de proyecto.
+\end{itemize}
+
+Además de esta información se agregó un menú en la barra superior de navegación de la pantalla de proyecto. El mismo permite acceder a acciones del \textit{hijo},
+que en este caso sería el admin de Miembro de proyecto.
+
+Cuando se asigna un admin como \textit{hijo}, se obtiene rutas anidadas, de forma que se puede acceder a acciones del \textit{hijo} desde la vista del padre. Ej: Una ruta
+para acceder a un miembro en particular sería de la forma:\newline \textbf{/miembroproyecto/{id}/(show | edit)}\@.\newline\newline Cuando se accede a los miembros de cada proyecto se obtienen rutas de la forma:\newline \textbf{/proyecto/{id}/miembroproyecto/{id}/(show | edit)},
+\newline \textbf{/proyecto/{id}/miembroproyecto/list}\newline
+
+Para crear un proyecto, se debe proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
+por lo tanto se utilizó un tipo de formulario que permite la elección de opciones múltiples y además permite agregar nuevas instancias de
+rol(figura \ref{fig:image/proyecto-editar}).
+
+\begin{figure}[h]
+    \includegraphics[width=1\linewidth]{image/proyecto-editar.png}
+    \caption{Admin: Acción de  editar Proyectos.\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web.}
+    \label{fig:image/proyecto-editar}
+\end{figure}
+
+\subsubsection{Miembro de Proyecto}%
+\label{ssub:miembro_de_proyecto_admin}
+Para la definición del admin de miembros de proyecto se lo estableció como un \textit{hijo} de el admin Proyecto, esto es porque tiene sentido desde el punto de vista
+de la relación que forman. Un proyecto estará integrado por muchos miembros, por lo tanto al asignar a miembros de proyecto como admin \textit{hijo} de Proyecto permite
+administrar los miembros desde la interfaz de proyectos. Al fin y al cabo, la clase admin de miembros no tiene sentido por sí sola.
+
+Para asignar un admin como \textit{hijo} se debe configurar el servicio padre un método denominado \textbf{addChild}. Como parámetros requiere el servicio del admin
+a actuar de \textit{hijo} y el campo mediante el cual está relacionado.
+
+
+Al agregar un admin como \textit{hijo} se generan las rutas anidadas (seccion: \ref{ssub:admin_proyectadmin_proyecto}), pero no se tiene una forma de acceder a
+ellas desde la aplicación web\@. Una buena forma de solucionar este problema es, según la documentación de \textbf{Sonata}, agregar un menú en la barra superior
+de la página que contenga botones mediante los cuales acceder a estas rutas.\textcite{sonata-childAdmin}
+
+\begin{figure}[h]
+    \includegraphics[width=1\linewidth]{image/addChild.png}
+    \caption{Servicio admin de Proyecto de Extensión\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de código fuente.}
+    \label{fig:image/addChild}
+\end{figure}
+
+\newpage
+\subsubsection{Rol de proyecto}%
+\label{ssub:rol_de_proyecto_admin}
+
+El admin de roles es muy básico, solo contiene el campo de nombre. Por lo tanto, en cada una de sus acciones se agregó este unico campo.
+
+
+Lo interesante en este admin es que se agregó al admin de miembros como \textit{hijo}. De esta forma se puede listar los miembros que cumplen cada rol en
+particular.
+Esto se logra mediante el método \textbf{addChild} (figura \ref{fig:image/addChild}) y creando un menú del mismo tipo que el definido en el admin de miembros.
+
+\newpage
+\subsection{Librerias}%
+\label{sub:librerias}
+
+Si bien en muchos de los casos las librerías utilizadas en el desarrollo fueron configuradas por el componente\textbf{Flex}  de \textbf{Symfony}, algunos paquetes
+requirieron de una configuración mas compleja.
+% TODO   franco Continuar con la presentacion de esta seccion mar 29 oct 2019 21:19:40 -03
+
+\subsubsection{Instalacion y Configuración de \textbf{Sonata-User}}%
+\label{ssub:instalacion_y_configuración_de_sonata-user}
+
+Esta librería integra el componente \textbf{FOSUser} de \textbf{Symfony} con \textbf{Sonata} y agrega algunas características adicionales.
+Para su instalación es necesario tener FOSUser instalado y configurado además de SonataAdmin y SonataEasyExtends.
+
+
+Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
+
+\begin{itemize}
+    \item Doctrine: se debe definir el mapeo de entidades necesarias para el funcionamiento de la librería.
+    \item FOSUser: se requiere especificar entidades y servicios para la administración de usuarios y grupos.
+    \item Security: es necesario configurar la autenticación de usuarios y el control de acceso.
+    \item Routing: se debe agregar información necesaria para la generación de rutas.
+    \item Sonata-User: configuración que define el tipo de datos y las clases que definen la estructura de los datos de usuarios y grupos.
+\end{itemize}
+
 
 
 
