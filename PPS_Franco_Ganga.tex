@@ -16,7 +16,82 @@
 }
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    morekeywords={
+        fos_user:,
+        resource:,
+        db_driver:,
+        firewall_name:,
+        user_class:,
+        group:,
+        group_class:,
+        group_manager:,
+        service:,
+        user_manager:,
+        from_email:,
+        address:,
+        sender_name:,
+        sonata_user:,
+        manager_type:,
+        sonata_user_admin_security:,
+        sonata_user_admin_resetting:,
+        admin:,
+        pattern:,
+        context:,
+        form_login:,
+        provider:,
+        login_path:,
+        use_forward:,
+        check_path:,
+        failure_path:,
+        default_target_path:,
+        logout:,
+        path:,
+        target:,
+        anonymous:,
+        main:,
+        role_hierarchy:,
+        ROLE_ADMIN:,
+        ROLE_SUPER_ADMIN:,
+        SONATA:,
+        providers:,
+        fos_userbundle:,
+        id:,
+        encoders:,
+        access_control:
+    }
+}
+
+
+\renewcommand*{\lstlistingname}{Ejemplo de código}
+
+\lstset{
+    style=mystyle,
+    alsoletter={:}
+}
 
 
 \author{Franco Ganga}
@@ -35,8 +110,7 @@
 \setlength{\parindent}{0.75cm}
 
 
-
-\renewcommand{\figurename}{Imagen}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 \begin{document}
 \maketitle
@@ -137,7 +211,7 @@ Para este desarrollo se generarán rutas mediante las cuales se podrá acceder a
     \item \textbf{Implementación de autenticación del servicio}
 \end{itemize}
 
-\subsubsection{Instalación y configuración de librerias}%
+\subsubsection{Instalación y configuración de librerías}%
 \label{ssub:instalación_y_configuración_de_librerias}
 Se deberá configurar cada librería de acuerdo a las necesidades del sistema.
 A continuación se listan las librerías a utilizar para el desarrollo:
@@ -155,7 +229,7 @@ Este proyecto se desarrolló en conjunto con otros alumnos de la universidad, po
 
 \input{tareas_desarrolladas}
 
-\subsection{Introduccion Symfony}%
+\subsection{Introducción Symfony}%
 \label{ssub:introduccion_symfony}
 Symfony es un \textit{framework} PHP de código abierto para desarrollar aplicaciones web. Originalmente fue concebido por la
 agencia interactiva SensioLabs para el desarrollo de sitios web para sus propios clientes. Symfony se publicó en 2005 bajo
@@ -173,7 +247,7 @@ el funcionamiento de cada uno de ellos es necesario para una buena implementaci�
 \newpage
 \subsection{Modelado}%
 \label{sub:modelado}
-Como se indicó en la definicion de \hyperref[ssub:objetivos_especificos]{\textit{objetivos específicos}}, la integración entre RUDA y los sistemas fuentes de información será implementada por el área de sistemas de la universidad; por lo tanto las entidades definidas durante el desarrollo contienen
+Como se indicó en la definición de \hyperref[ssub:objetivos_especificos]{\textit{objetivos específicos}}, la integración entre RUDA y los sistemas fuentes de información será implementada por el área de sistemas de la universidad; por lo tanto las entidades definidas durante el desarrollo contienen
 % TODO   franco explicar entidades basicas  mar 29 oct 2019 17:17:06 -03
 
 \subsubsection{Introducción a Doctrine}%
@@ -190,8 +264,8 @@ contiene información referente a tipos de dato y relaciones entre entidades. A 
 Una relación en \textbf{Doctrine} está formado por dos entidades. Una de ellas actúa como el lado propietario de la relación y la otra como el inverso\@.
 El lado propietario de la relación es aquel en el cual \textbf{Doctrine} verifica si hubo cambios.
 Existen dos tipos de mapeo de relaciones, bi-direccionales y uni-direccionales\@.
-Una relación bi-direccional permite que ambos lados de la relación puedan accederse entre sí\@. En cambio, una relación uni
--direccional sólo puede accederse a través del lado propietario\@.
+Una relación bi-direccional permite que ambos lados de la relación puedan accederse entre sí\@. En cambio, una relación uni-direccional sólo puede accederse
+a través del lado propietario\@.
 Al trabajar con relaciones, se debe tener en cuenta la manera en que Doctrine comprueba por cambios en los datos, ya que cambios persistidos en el lado
 inverso de la relación serán ignorados por el ORM al momento de actualizar información a la base de datos.
 
@@ -341,7 +415,7 @@ para acceder a un miembro en particular sería de la forma:\newline \textbf{/mie
 
 Para crear un proyecto, se debe proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
 por lo tanto se utilizó un tipo de formulario que permite la elección de opciones múltiples y además permite agregar nuevas instancias de
-rol(figura \ref{fig:image/proyecto-editar}).
+rol(figura~\ref{fig:image/proyecto-editar}).
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/proyecto-editar.png}
@@ -359,7 +433,7 @@ Para asignar un admin como \textit{hijo} se debe configurar el servicio padre un
 a actuar de \textit{hijo} y el campo mediante el cual está relacionado.
 
 
-Al agregar un admin como \textit{hijo} se generan las rutas anidadas (seccion: \ref{ssub:admin_proyectadmin_proyecto}), pero no se tiene una forma de acceder a
+Al agregar un admin como \textit{hijo} se generan las rutas anidadas (sección:~\ref{ssub:admin_proyectadmin_proyecto}), pero no se tiene una forma de acceder a
 ellas desde la aplicación web\@. Una buena forma de solucionar este problema es, según la documentación de \textbf{Sonata}, agregar un menú en la barra superior
 de la página que contenga botones mediante los cuales acceder a estas rutas.\textcite{sonata-childAdmin}
 
@@ -378,7 +452,7 @@ El admin de roles es muy básico, solo contiene el campo de nombre. Por lo tanto
 
 Lo interesante en este admin es que se agregó al admin de miembros como \textit{hijo}. De esta forma se puede listar los miembros que cumplen cada rol en
 particular.
-Esto se logra mediante el método \textbf{addChild} (figura \ref{fig:image/addChild}) y creando un menú del mismo tipo que el definido en el admin de miembros.
+Esto se logra mediante el método \textbf{addChild} (figura~\ref{fig:image/addChild}) y creando un menú del mismo tipo que el definido en el admin de miembros.
 
 \newpage
 \subsection{Librerias}%
@@ -392,21 +466,180 @@ requirieron de una configuración mas compleja.
 \label{ssub:instalacion_y_configuración_de_sonata-user}
 
 Esta librería integra el componente \textbf{FOSUser} de \textbf{Symfony} con \textbf{Sonata} y agrega algunas características adicionales.
-Para su instalación es necesario tener FOSUser instalado y configurado además de SonataAdmin y SonataEasyExtends.
-
+Para su instalación es necesario tener FOSUser instalado y configurado además de SonataAdmin y SonataEasyExtends\@.
+Para este proceso se siguieron los pasos establecidos en la documentación de \textbf{Sonata-User}~\textcite{sonata-user}
 
 Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
 
 \begin{itemize}
-    \item Doctrine: se debe definir el mapeo de entidades necesarias para el funcionamiento de la librería.
-    \item FOSUser: se requiere especificar entidades y servicios para la administración de usuarios y grupos.
-    \item Security: es necesario configurar la autenticación de usuarios y el control de acceso.
-    \item Routing: se debe agregar información necesaria para la generación de rutas.
-    \item Sonata-User: configuración que define el tipo de datos y las clases que definen la estructura de los datos de usuarios y grupos.
+    \item \textbf{Doctrine:} se debe definir el mapeo de entidades necesarias para el funcionamiento de la librería.
+    \item \textbf{FOSUser:} se requiere especificar entidades y servicios para la administración de usuarios y grupos.
+    \item \textbf{Security:} es necesario configurar la autenticación de usuarios y el control de acceso.
+    \item \textbf{Routing:} se debe agregar información necesaria para la generación de rutas.
+    \item \textbf{Sonata-User:} configuración que define el tipo de datos y las clases que definen la estructura de los datos de usuarios y grupos.
 \end{itemize}
 
 
 
+Como primer paso para la instalación y configuración de Sonata-User, se agregó la librería FOSUser y Sonata-User a través del gestor de paquetes Composer,
+luego se comenzó con la configuración:
+
+\paragraph{Sonata-User}~\newline
+
+Se especificó a Sonata-User que los datos son administrados por un ORM.
+
+\begin{lstlisting}[caption=archivo de configuración de sonata-user]
+#src/config/packages/sonata_user.yaml
+
+sonata_user:
+    manager_type: orm
+
+\end{lstlisting}
+
+\paragraph{FOSUser}~\newline
+
+En cuanto a FOSUser se definió el driver de base de datos como ORM, el sistema de autenticación que utilizará\@. También se especificaron unas clases de base
+proporcionadas por Sonata-User que se van a utilizar para la generación de las entidades finales de usuario y grupo\@. Por último se definen los servicios
+que administran estas entidades e información sobre el servicio de correo.
+
+\begin{lstlisting}[caption=archivo de configuración de FOSUser]
+#src/config/packages/fos_user.yaml
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: Sonata\UserBundle\Entity\BaseUser
+    group:
+      group_class: Sonata\UserBundle\Entity\BaseGroup
+
+      group_manager: sonata.user.orm.group_manager
+    service:
+      user_manager: sonata.user.orm.user_manager
+
+    from_email:
+        address: "test@domain.com"
+        sender_name: "test@domain.com"
+
+\end{lstlisting}
+
+\myparagraph{Doctrine}
+
+
+La única configuración necesaria para el ORM es la definición explícita de cada una de las entidades mapeadas.
+Doctrine cuenta con una característica llamada auto mapping, la cual permite cargar la configuración de entidades almacenadas bajo el directorio Entity/
+de cada uno de los bundles.
+Para la configuración de doctrine, cada entidad utilizada por Sonata-User y FOSUser debe estar definida en su archivo de configuración; pero dado que se
+tiene habilitado la función de auto mapping y cada entidad está bajo un directorio de nombre “Entity” no es necesario agregar nada a la configuración existente.
+
+\myparagraph{Routing}
+
+
+Se agregaron las configuraciones de las rutas necesarias para ambas librerías.
+
+
+
+\begin{lstlisting}[caption=archivo de configuración de rutas de FOSUser]
+#src/config/routes/fos_user.yaml
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+\end{lstlisting}
+
+\begin{lstlisting}[caption=archivo de configuración de rutas de sonata-user]
+#src/config/routes/sonata_user.yaml
+
+sonata_user_admin_security:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+sonata_user_admin_resetting:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
+    prefix: /admin/resetting
+
+\end{lstlisting}
+
+\myparagraph{Security}
+
+En cuanto a la configuración de seguridad, se definieron dos sistemas de autenticación (denominados firewall)\@. Uno se encargará de administrar la seguridad en
+los usuarios admin y el otro en usuarios básicos.
+
+\begin{lstlisting}[caption=Firewall para el área admin del sistema.]
+#src/config/packages/security.yaml
+
+# -> custom firewall for the admin area of the URL
+        admin:
+            pattern:            /admin(.*)
+            context:            user
+            form_login:
+                provider:       fos_userbundle
+                login_path:     /admin/login
+                use_forward:    false
+                check_path:     /admin/login_check
+                failure_path:   null
+                default_target_path: /admin/dashboard
+            logout:
+                path:           /admin/logout
+                target:         /admin/login
+            anonymous:          true
+\end{lstlisting}
+
+\newpage
+\begin{lstlisting}[caption=Firewall para el área de registro y login de usuarios básicos.]
+#src/config/packages/security.yaml
+        main:
+            pattern:             .*
+            context:             user
+            form_login:
+                provider:       fos_userbundle
+                login_path:     /login
+                use_forward:    false
+                check_path:     /login_check
+                failure_path:   null
+            logout:             true
+            anonymous:          true
+\end{lstlisting}
+
+\noindent
+Además se especificó la jerarquía de roles y proveedor de usuarios:
+
+\begin{lstlisting}[caption={Jerarquía de roles, tipo de encriptación y proveedor de usuarios}]
+    role_hierarchy:
+        ROLE_ADMIN:       [ROLE_USER, ROLE_SONATA_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        SONATA:
+            - ROLE_SONATA_PAGE_ADMIN_PAGE_EDIT
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+\end{lstlisting}
+
+\newpage
+Por último se define el control de acceso de manera que se pueda ingresar anónimamente a cada página de registro, inicio de sesión, reinicio de contraseña,
+etc.
+También se especifica qué roles tienen permitido ingresar a la parte de administración del sistema.
+
+\begin{lstlisting}[caption=Control de acceso]
+#src/config/packages/security.yaml
+
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login_check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # Secured part of the site
+        # This config requires being logged for the whole site and having the admin role for the admin part.
+        # Change these rules to adapt them to your needs
+         - { path: ^/admin/, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }
+         - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+\end{lstlisting}
 
 
 \newpage
