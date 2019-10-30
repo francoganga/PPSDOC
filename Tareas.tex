@@ -1,0 +1,50 @@
+
+\subsection{Tareas}%
+\label{sub:tareas}
+A continuación, se detallarán las tareas por ejecutar en vistas al cumplimiento de los objetivos previamente definidos:
+
+\subsubsection{Modelado conceptual de datos}%
+\label{ssub:modelado_conceptual_de_datos}
+Se definirá el modelado de datos a implementar basándose en los datos que se requieren almacenar y como están relacionados.
+
+\subsubsection{Creación de la base de datos}
+\label{ssub:creacioDB}
+
+Entidades a desarrollar que almacenarán datos  sobre la duración de cada actividad:
+
+\begin{itemize}
+    \input{entidades}
+\end{itemize}
+
+\subsubsection{Definición de ABMs}%
+\label{ssub:definición_de_abms}
+
+
+Una ABM permite al usuario interactuar con los datos, por esto es que se deberá definir cada una en particular:\newline
+
+Relacionadas a la política de la institución:
+\begin{itemize}
+    \input{lista_abm}
+\end{itemize}
+\ \\No relacionadas a la política de la institución:
+\begin{itemize}
+    \input{lista_abm_nopoliticas}
+\end{itemize}
+
+\subsubsection{Desarrollo de API }%
+\label{ssub:desarrollo_de_api_}
+Para este desarrollo se generarán rutas mediante las cuales se podrá acceder a la misma información detallada en la tarea anterior.
+
+\begin{itemize}
+    \item \textbf{Implementación de nodos para obtener cada dato:} cada dato debe ser accesible mediante una petición http.
+    \item \textbf{Implementación de autenticación del servicio}
+\end{itemize}
+
+\subsubsection{Instalación y configuración de librerías}%
+\label{ssub:instalación_y_configuración_de_librerias}
+Se deberá configurar cada librería de acuerdo a las necesidades del sistema.
+A continuación se listan las librerías a utilizar para el desarrollo:
+
+\begin{itemize}
+    \input{librerias}
+\end{itemize}
