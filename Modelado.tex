@@ -1,8 +1,9 @@
 
 \subsection{Modelado}%
 \label{sub:modelado}
-Como se indicó en la definición de \hyperref[ssub:objetivos_especificos]{\textit{objetivos específicos}}, la integración entre RUDA y los sistemas fuentes de información será implementada por el área de sistemas de la universidad; por lo tanto las entidades definidas durante el desarrollo contienen
-% TODO   franco explicar entidades basicas  mar 29 oct 2019 17:17:06 -03
+Como se indicó en la definición de \hyperref[ssub:objetivos_especificos]{\textit{objetivos específicos}}, la integración entre RUDA y los sistemas fuentes
+de información será implementada por el área de sistemas de la universidad; por lo tanto las entidades definidas durante el desarrollo son algo así como
+\textit{placeholders}, necesarias para la implementación de las clases admin y recursos de API-platform.
 
 \subsubsection{Introducción a Doctrine}%
 \label{ssub:introducción_doctrine}
@@ -105,4 +106,5 @@ Esta entidad representa un rol de proyecto, a cada instancia de miembro se le pu
 
 Se estableció la relación de roles del tipo n-n, es decir con una cardinalidad de muchos a muchos; ya que un proyecto puede tener muchos roles y además
 un rol puede tener muchos proyectos\@. Como la entidad de roles se actualizará a partir de los proyectos, se definió a Proyecto como dueño o propietario de
-la relación. En el caso de una relación de este tipo el lado propietario es aquel que contiene el parámetro \textbf{inversedBy} en su definición.
+la relación. En el caso de una relación de este tipo el lado propietario es aquel que contiene el parámetro \textbf{inversedBy} en
+su definición.~\textcite{doctrine-inheritance}
