@@ -1,11 +1,11 @@
 
-\subsection{Librerias}%
+\subsection{Librerías}%
 \label{sub:librerias}
 
 Si bien en muchos de los casos las librerías utilizadas en el desarrollo fueron configuradas por el componente\textbf{Flex}  de \textbf{Symfony}, algunos paquetes
-requirieron de una configuración mas compleja y son los aquí listados.
+requirieron de una configuración más compleja y son los aquí listados.
 
-\subsubsection{Instalación y Configuración de \textbf{Sonata-User}}%
+\subsubsection{Instalación y Configuración de Sonata-User}%
 \label{ssub:instalacion_y_configuración_de_sonata-user}
 
 Esta librería integra el componente \textbf{FOSUser} de \textbf{Symfony} con \textbf{Sonata Admin} y agrega algunas características adicionales.
@@ -19,7 +19,7 @@ Esta librería integra el componente \textbf{FOSUser} de \textbf{Symfony} con \t
 
 
 Para su instalación es necesario tener FOSUser instalado y configurado además de SonataAdmin y SonataEasyExtends\@.
-Para este proceso se siguieron los pasos establecidos en la documentación de \textbf{Sonata-User}~\textcite{sonata-user}
+Para este proceso se siguieron los pasos establecidos en la documentación de \textbf{Sonata-User}~\parencite{sonata-user}
 
 Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
 
@@ -40,7 +40,7 @@ luego se comenzó con la configuración:
 
 Se especificó a Sonata-User que los datos son administrados por un ORM.
 
-\begin{lstlisting}[caption=archivo de configuración de sonata-user]
+\begin{lstlisting}[caption={archivo de configuración de sonata-user\\Fuente: \sonatainstallation.}]
 #src/config/packages/sonata_user.yaml
 
 sonata_user:
@@ -54,7 +54,7 @@ En cuanto a FOSUser se definió el driver de base de datos como ORM, el sistema 
 proporcionadas por Sonata-User que se van a utilizar para la generación de las entidades finales de usuario y grupo\@. Por último se definen los servicios
 que administran estas entidades e información sobre el servicio de correo.
 
-\begin{lstlisting}[caption=archivo de configuración de FOSUser]
+\begin{lstlisting}[caption={archivo de configuración de FOSUser\\ Fuente: \sonatainstallation.}]
 #src/config/packages/fos_user.yaml
 
 fos_user:
@@ -90,14 +90,14 @@ Se agregaron las configuraciones de las rutas necesarias para ambas librerías.
 
 
 
-\begin{lstlisting}[caption=archivo de configuración de rutas de FOSUser]
+\begin{lstlisting}[caption={archivo de configuración de rutas de FOSUser\\Fuente: \sonatainstallation.}]
 #src/config/routes/fos_user.yaml
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 \end{lstlisting}
 
-\begin{lstlisting}[caption=archivo de configuración de rutas de sonata-user]
+\begin{lstlisting}[caption={archivo de configuración de rutas de sonata-user\\Fuente: \sonatainstallation.}]
 #src/config/routes/sonata_user.yaml
 
 sonata_user_admin_security:
@@ -115,7 +115,7 @@ sonata_user_admin_resetting:
 En cuanto a la configuración de seguridad, se definieron dos sistemas de autenticación (denominados firewall)\@. Uno se encargará de administrar la seguridad en
 los usuarios admin y el otro en usuarios básicos.
 
-\begin{lstlisting}[caption=Firewall para el área admin del sistema.]
+\begin{lstlisting}[caption={Firewall para el área admin del sistema.\\Fuente: \sonatainstallation.}]
 #src/config/packages/security.yaml
 
 # -> custom firewall for the admin area of the URL
@@ -136,7 +136,7 @@ los usuarios admin y el otro en usuarios básicos.
 \end{lstlisting}
 
 \newpage
-\begin{lstlisting}[caption=Firewall para el área de registro y login de usuarios básicos.]
+\begin{lstlisting}[caption={Firewall para el área de registro y login de usuarios básicos.\\Fuente: \sonatainstallation.}]
 #src/config/packages/security.yaml
         main:
             pattern:             .*
@@ -154,7 +154,7 @@ los usuarios admin y el otro en usuarios básicos.
 \noindent
 Además se especificó la jerarquía de roles y proveedor de usuarios:
 
-\begin{lstlisting}[caption={Jerarquía de roles, tipo de encriptación y proveedor de usuarios}]
+\begin{lstlisting}[caption={Jerarquía de roles, tipo de encriptación y proveedor de usuarios\\Fuente: \sonatainstallation}]
     role_hierarchy:
         ROLE_ADMIN:       [ROLE_USER, ROLE_SONATA_ADMIN]
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
@@ -176,7 +176,7 @@ También se especifica qué roles tienen permitido ingresar a la parte de admini
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/acl.png}
-    \caption{Control de acceso\newline \textbf{Fuente:} Recuperado de \href{https://sonata-project.org/bundles/user/master/doc/reference/installation.html}{Documentación de Sonata-User}}
+    \caption{Control de acceso\newline \textbf{Fuente:} Recuperado de \url{https://sonata-project.org/bundles/user/master/doc/reference/installation.html}}
     \label{fig:image/acl}
 \end{figure}
 
@@ -192,7 +192,7 @@ bin/console sonata:easy-extends:generate SonataUserBundle --dest=src --namespace
 Esto da como resultado un directorio en \textbf{Application\textbackslash Sonata\textbackslash UserBundle} el cual contiene las entidades a utilizar por las librerías.
 Por último se configuró Sonata-User y FOSUser para que utilicen las nuevas entidades:
 
-\begin{lstlisting}[caption={Archivo de configuración de Sonata-User.}]
+\begin{lstlisting}[caption={Archivo de configuración de Sonata-User.\\Fuente: \sonatainstallation}]
 #src/config/packages/sonata_user.yaml
 
 sonata_user:
@@ -204,7 +204,7 @@ sonata_user:
 \end{lstlisting}
 
 \newpage
-\begin{lstlisting}[caption=Archivo de configuración de FOSUser.]
+\begin{lstlisting}[caption=Archivo de configuración de FOSUser.\\Fuente: \sonatainstallation]
 #src/config/packages/fos_user.yaml
 
 fos_user:
@@ -227,7 +227,7 @@ fos_user:
 \label{ssub:api_platform}
 
 Para la instalación de esta librería sólo es necesario agregarla a través de \textbf{Composer}, Flex se hace cargo de la configuración\@. Luego de hecho esto,
-se configuró las entidades a exponer, que en este caso serían todas las entidades que representan datos en el sistema.
+se configuró las entidades a exponer, que en este caso, serían todas las entidades que representan datos en el sistema.
 
 
 API-Platform permite hacer esto mediante la anotación \textbf{ApiResource}. Por defecto, este componente serializa todos los campos y todas aquellas funciones
@@ -243,17 +243,18 @@ o transmitido (por ejemplo, a través una conexión de red) y reconstruidos lueg
 
 En \textbf{Symfony}, esto es logrado a través del componente \textbf{Serializer}. El proceso en sí, sigue el esquema presentado en la figura
 \ref{fig:image/serializationWorkflow}\@.
-Para la conversión primero se convierte el objeto en un array (proceso denominado
+Para la conversión primero se convierte el objeto en un \textit{array} (proceso denominado
 normalización) y luego se convierte al formato específico que se necesite (a este proceso se lo llama codificación).
 
-API-Platform permite modificar la información que se expone a los usuarios mediante grupos de serialización y deserialización\@. A través del uso de anotaciones
+API-Platform permite modificar la información que se expone a los usuarios mediante grupos de \textit{serialización} y \textit{deserialización}\@. A través del uso de anotaciones
 en cada propiedad de la entidad se puede definir si agregar la propiedad al proceso de normalización o no dependiendo de la acción que se esté realizando.
-Si se desea funciones más complejas, es posible definir normalizadores y codificadores personalizados o decorar normalizadores existentes.~\textcite{api-platform-serialization}
+Si se desea funciones más complejas, es posible definir \textit{normalizadores} y \textit{codificadores} personalizados o decorar \textit{normalizadores} existentes.
+~\parencite{api-platform-serialization}
 
 \myparagraph{Modificando el proceso de serialización}
 
 
-Se utilizaron dos grupos de serialización:
+Se utilizaron dos grupos de \textit{serialización:}
 
 \begin{itemize}
     \item \textbf{read:} permite definir el contexto de normalización para acciones de lectura de datos.
@@ -267,7 +268,7 @@ presentes o que no se desean exponer a los usuarios.
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/serializationWorkflow.png}
-    \caption{El proceso de serialización\newline \textbf{Fuente:} Recuperado de~\href{https://api-platform.com/docs/core/serialization/}{Documentación de API-Platform}}
+    \caption{El proceso de serialización\newline \textbf{Fuente:} Recuperado de~\url{https://api-platform.com/docs/core/serialization/}}
     \label{fig:image/serializationWorkflow}
 \end{figure}
 

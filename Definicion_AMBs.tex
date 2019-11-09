@@ -2,18 +2,18 @@
 \subsection{Definición de ABMs - Clases Admin}%
 \label{sub:definición_de_abms_clases_admin}
 
-Para definir un ABM, es decir una interfaz capaz de manejar el alta, baja y modificación de registros; es necesario una entidad. Por este motivo, para obtener
+Para definir un ABM, es decir, una interfaz capaz de manejar el alta, baja y modificación de registros es necesario una entidad. Por este motivo, para obtener
 una idea general del funcionamiento de Sonata-Admin, se decidió definir algunas entidades y generar una clase admin\@.
 En sonata admin, una clase admin es aquella que, dada una entidad, permite añadir un servicio en la plataforma web sonata que se hace cargo de cada una de estas funciones.
 
 Para crear un admin es necesario extender de la clase \textbf{AbstractAdmin} que provee sonata y, mediante métodos heredados de la misma, configurar la manera en
 que se muestra la información\@.
-Alguno de estos métodos son:
+Algunos de estos métodos son:
 
 \begin{itemize}
     \item \textit{configureFormFields:} este método define los campos a mostrarse durante la acción de crear y editar.
     \item \textit{configureListFields:} define los campos a mostrar durante la acción de listar datos.
-    \item \textit{configureShowFields:} establece la información a mostrar durante la acción de Ver una entrada.
+    \item \textit{configureShowFields:} establece la información a mostrar durante la acción de ver una entrada.
 \end{itemize}
 
 \noindent
@@ -26,7 +26,7 @@ Además de esto, una clase admin en \textbf{Sonata} permite:
     \item Establecer filtros de búsqueda.
 \end{itemize}
 
-Éstas son las funcionalidades que se utilizaron en este proyecto, sonata cuenta con aún más opciones de configuración.
+Éstas son las funcionalidades que se utilizaron en este proyecto, sonata cuenta aún con más opciones de configuración.
 
 Una clase admin contiene una referencia a la entidad base del mismo a través de un objeto denominado Subject. Sonata utiliza este objeto para realizar
 la mayoría de sus operaciones.
@@ -39,7 +39,8 @@ Para configurar las diferentes secciones del admin, es necesario especificar la 
 \end{figure}
 
 Si se desea acceder a asociaciones, (datos que representan la relación de una entidad) se puede hacerlo mediante una notación de puntos, por ejemplo:
-Si se tiene una instancia de \textbf{Actividad}, la misma tendrá una asociación con una entidad persona. Por lo tanto se puede acceder al nombre de una persona referenciándola como ``persona.nombre''.
+si se tiene una instancia de \textbf{Actividad}, la misma tendrá una asociación con una entidad persona\@. Por lo tanto, se puede acceder al nombre de una
+persona referenciándola como ``persona.nombre''.
 
 \subsubsection{Proyecto}%
 \label{ssub:admin_proyectadmin_proyecto}
@@ -56,32 +57,33 @@ Además de esta información se agregó un menú en la barra superior de navegac
 que en este caso sería el admin de Miembro de proyecto.
 
 Cuando se asigna un admin como \textit{hijo}, se obtiene rutas anidadas, de forma que se puede acceder a acciones del \textit{hijo} desde la vista del padre. Ej: Una ruta
-para acceder a un miembro en particular sería de la forma:\newline \textbf{/miembroproyecto/{id}/(show | edit)}\@.\newline\newline Cuando se accede a los miembros de cada proyecto se obtienen rutas de la forma:\newline \textbf{/proyecto/{id}/miembroproyecto/{id}/(show | edit)},
+para acceder a un miembro en particular sería de la forma:\newline \textbf{/miembroproyecto/{id}/(show | edit)}\@.\newline\newline Cuando se accede a los
+miembros de cada proyecto se obtienen rutas de la forma:\newline \textbf{/proyecto/{id}/miembroproyecto/{id}/(show | edit)},
 \newline \textbf{/proyecto/{id}/miembroproyecto/list}\newline
 
-Para crear un proyecto, se debe proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
-por lo tanto se utilizó un tipo de formulario que permite la elección de opciones múltiples y además permite agregar nuevas instancias de
-rol(figura~\ref{fig:image/proyecto-editar}).
+Para crear un proyecto, se deben proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
+por lo tanto, se utilizó un tipo de formulario que permite la elección de opciones múltiples y, además, permite agregar nuevas instancias de
+rol (figura~\ref{fig:image/proyecto-editar}).
 
 \begin{figure}[h]
-    \includegraphics[width=1\linewidth]{image/proyecto-editar.png}
+    \includegraphics[width=1\linewidth]{image/edit-proyecto.png}
     \caption{Admin: Acción de  editar Proyectos.\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web.}
     \label{fig:image/proyecto-editar}
 \end{figure}
 
 \subsubsection{Miembro de Proyecto}%
 \label{ssub:miembro_de_proyecto_admin}
-Para la definición del admin de miembros de proyecto se lo estableció como un \textit{hijo} de el admin Proyecto, esto es porque tiene sentido desde el punto de vista
-de la relación que forman. Un proyecto estará integrado por muchos miembros, por lo tanto al asignar a miembros de proyecto como admin \textit{hijo} de Proyecto permite
-administrar los miembros desde la interfaz de proyectos. Al fin y al cabo, la clase admin de miembros no tiene sentido por sí sola.
+Para la definición del admin de miembros de proyecto se lo estableció como un \textit{hijo} del admin Proyecto, esto es porque tiene sentido desde el punto
+de vista de la relación que forman. Un proyecto estará integrado por muchos miembros, por lo tanto, al asignar a miembros de proyecto como admin \textit{hijo}
+de Proyecto permite administrar los miembros desde la interfaz de proyectos. Al fin y al cabo, la clase admin de miembros no tiene sentido por sí sola.
 
-Para asignar un admin como \textit{hijo} se debe configurar el servicio padre un método denominado \textbf{addChild}. Como parámetros requiere el servicio del admin
-a actuar de \textit{hijo} y el campo mediante el cual está relacionado.
+Para asignar un admin como \textit{hijo} se debe configurar el servicio padre un método denominado \textbf{addChild}. Como parámetros requiere el servicio
+del admin a actuar de \textit{hijo} y el campo mediante el cual está relacionado.
 
 
 Al agregar un admin como \textit{hijo} se generan las rutas anidadas (sección:~\ref{ssub:admin_proyectadmin_proyecto}), pero no se tiene una forma de acceder a
 ellas desde la aplicación web\@. Una buena forma de solucionar este problema es, según la documentación de \textbf{Sonata}, agregar un menú en la barra superior
-de la página que contenga botones mediante los cuales acceder a estas rutas.\textcite{sonata-childAdmin}
+de la página que contenga botones mediante los cuales acceder a estas rutas.\parencite{sonata-childAdmin}
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/addChild.png}
@@ -89,11 +91,10 @@ de la página que contenga botones mediante los cuales acceder a estas rutas.\te
     \label{fig:image/addChild}
 \end{figure}
 
-\newpage
 \subsubsection{Rol de proyecto}%
 \label{ssub:rol_de_proyecto_admin}
 
-El admin de roles es muy básico, solo contiene el campo de nombre. Por lo tanto, en cada una de sus acciones se agregó este unico campo.
+El admin de roles es muy básico, solo contiene el campo de nombre. Por lo tanto, en cada una de sus acciones se agregó este único campo.
 
 
 Lo interesante en este admin es que se agregó al admin de miembros como \textit{hijo}. De esta forma se puede listar los miembros que cumplen cada rol en
