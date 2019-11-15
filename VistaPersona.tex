@@ -1,12 +1,3 @@
-\subsection{Introducción Twig}%
-\label{sub:introducción_twig}
-
-Twig es el motor de \textit{templates} por defecto de \textbf{Symfony}, permite reutilizar elementos de la vista en distintas partes de una aplicación web\@. Además, permite incluir lógica simple a la
-vista de manera que sea fácil de comprender y entender\@. Un motor de \textit{templates} permite, entre otras cosas, reutilizar la estructura básica de una página y cambiar o sobrescribir
-aquello que varía.
-
-Twig funciona mediante el uso de \textbf{bloques}, los cuales son etiquetas que delimitan secciones del \textit{template}\@. Estas etiquetas tienen la función de indicarle al motor de \textit{templates}
-que un \textit{template} \textit{hijo} puede sobrescribir estas partes del \textit{template}\@. De esta manera se consigue separar las partes estáticas del sitio, de aquellas que son dinámicas.
 
 
 \subsection{Vista de Persona}
@@ -15,18 +6,23 @@ Se creó una vista mediante la cual se pueda acceder a la información de cada p
 implementación se basó en la iteración de la colección de actividades  de la persona y la generación de html mediante \textbf{Twig}\@. Además,
 se agregó estilo mediante \textbf{CSS} y una simple animación en \textbf{Javascript}.
 
+\subsubsection{Introducción Twig}%
+\label{ssub:introducción_twig}
+
+Twig es el motor de \textit{templates} por defecto de \textbf{Symfony}, permite reutilizar elementos de la vista en distintas partes de una aplicación web\@. Además, permite incluir lógica simple a la
+vista de manera que sea fácil de comprender y entender\@. Un motor de \textit{templates} permite, entre otras cosas, reutilizar la estructura básica de una página y cambiar o sobrescribir
+aquello que varía.
+
+Twig funciona mediante el uso de \textbf{bloques}, los cuales son etiquetas que delimitan secciones del \textit{template}\@. Estas etiquetas tienen la función de indicarle al motor de \textit{templates}
+que un \textit{template} \textit{hijo} puede sobrescribir estas partes del \textit{template}\@. De esta manera se consigue separar las partes estáticas del sitio, de aquellas que son dinámicas.
 
 \subsubsection{Estilo}%
-\label{ssub:estilo}~\\
+\label{ssub:estilo}
 
-\myparagraph{Introducción a Sass}
+Para la implementación del estilo de la vista, se utilizó \textbf{Sass}\@. El cual es un lenguaje de hojas de estilo que se compila a CSS básico. Permite, entre otras cosas, utilizar funciones, variables y
+herencia de selectores. Se utilizó en el desarrollo del template de persona por el hecho de que al utilizar selectores anidados se simplifica la lectura y comprensión de algunas partes
+de la implementación. Además, la opción de poder definir variables y funciones facilita mucho el desarrollo.
 
-Sass es un lenguaje de hojas de estilo que se compila a CSS básico. Permite, entre otras cosas, utilizar funciones, variables y herencia de selectores. Se utilizó en el desarrollo del template
-de persona por el hecho de
-que al utilizar selectores anidados se simplifica la lectura y comprensión de algunas partes de la implementación. Además, la opción de poder definir variables y funciones facilita mucho el desarrollo.
-
-
-\myparagraph{Implementación}
 
 Se utilizó una distribución de elementos utilizando \textit{grid}, una característica de \textbf{CSS} que permite acomodar elementos en una cuadrícula\@.
 En un principio, se decidió por asignar los elementos de acuerdo a la figura~\ref{fig:image/grid}. Esto quiere decir que se separó el contenido en tres contenedores: el título, la lista de actividades y
@@ -63,7 +59,6 @@ Una vez definida la cuadrícula, se estableció el espacio que utilizará cada c
     }
 }
 \end{lstlisting}
-\newpage
 \begin{lstlisting}[caption={Orientación del contenedor de datos personales.\\Fuente: Elaboración propia.}]
 .datos-personales{
     grid-column-start: 2;

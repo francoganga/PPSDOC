@@ -10,16 +10,17 @@ requirieron de una configuración más compleja y son los aquí listados.
 
 Esta librería integra el componente \textbf{FOSUser} de \textbf{Symfony} con \textbf{Sonata Admin} y agrega algunas características adicionales.
 
-\begin{figure}[h]
-    \includegraphics[width=1\linewidth]{image/adminLogin.png}
-    \caption{Pantalla de login de Sonata-User\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web}
-    \label{fig:image/adminLogin}
-\end{figure}
 
 
 
 Para su instalación es necesario tener FOSUser instalado y configurado además de SonataAdmin y SonataEasyExtends\@.
 Para este proceso se siguieron los pasos establecidos en la documentación de \textbf{Sonata-User}~\parencite{sonata-user}
+
+\begin{figure}[H]
+    \includegraphics[width=1\linewidth]{image/adminLogin.png}
+    \caption{Pantalla de login de Sonata-User\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web}
+    \label{fig:image/adminLogin}
+\end{figure}
 
 Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
 
@@ -241,6 +242,12 @@ en particular tiene un rol). Por este motivo, se decidió configurar la informac
 La serialización es el proceso de convertir estructuras de datos u objetos en un formato que puede ser almacenado (por ejemplo, en un archivo o búfer de memoria)
 o transmitido (por ejemplo, a través una conexión de red) y reconstruidos luego (posiblemente en un entorno diferente).~\parencite{serialization}
 
+\begin{figure}[H]
+    \includegraphics[width=1\linewidth]{image/serializationWorkflow.png}
+    \caption{El proceso de serialización\newline \textbf{Fuente:} Recuperado de~\url{https://api-platform.com/docs/core/serialization/}}
+    \label{fig:image/serializationWorkflow}
+\end{figure}
+
 En \textbf{Symfony}, esto es logrado a través del componente \textbf{Serializer}. El proceso en sí, sigue el esquema presentado en la figura
 \ref{fig:image/serializationWorkflow}\@.
 Para la conversión primero se convierte el objeto en un \textit{array} (proceso denominado
@@ -256,15 +263,6 @@ Si se desea funciones más complejas, es posible definir \textit{normalizadores}
 Mediante anotaciones se agregó cada propiedad relevante a cada acción en particular y se omitieron aquellas propiedades o funciones que no necesitan estar
 presentes o que no se desean exponer a los usuarios.
 
-
-
-\begin{figure}[h]
-    \includegraphics[width=1\linewidth]{image/serializationWorkflow.png}
-    \caption{El proceso de serialización\newline \textbf{Fuente:} Recuperado de~\url{https://api-platform.com/docs/core/serialization/}}
-    \label{fig:image/serializationWorkflow}
-\end{figure}
-
-
-
-
+Al definir un grupo de serialización se logra que al, agregar una propiedad al contexto de normalización, sólo se serialize las propiedades pertenecientes al grupo en cuestión. Esto quiere decir que, si
+se agrega al contexto de normalización una relación, se serializarán los campos de la entidad relacionada que pertenezcan al grupo de serialización.
 
