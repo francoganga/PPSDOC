@@ -12,21 +12,72 @@ que un \textit{template} \textit{hijo} puede sobrescribir estas partes del \text
 \subsection{Vista de Persona}
 \label{sub:vista_persona}
 Se creó una vista mediante la cual se pueda acceder a la información de cada persona y a la lista de actividades en las que se encuentra involucrada. Su
-implementación se basó en la iteración de la colección de actividades  de la persona y la generación de html mediante \textbf{Twig}\@.
-Como último paso se agregó estilo mediante \textbf{CSS} y una simple animación en \textbf{Javascript}.
+implementación se basó en la iteración de la colección de actividades  de la persona y la generación de html mediante \textbf{Twig}\@. Además,
+se agregó estilo mediante \textbf{CSS} y una simple animación en \textbf{Javascript}.
 
 
 \subsubsection{Estilo}%
-\label{ssub:estilo}
+\label{ssub:estilo}~\\
 
-Se utilizó una distribución de elementos utilizando \textit{grid}, una característica de \textbf{CSS} que permite acomodar elementos en una grilla\@. En primer lugar, se comenzó heredando de un template
-general de \textbf{Sonata-Admin} denominado \textbf{standard\_layout} y se sobrescribió la sección o el bloque \textbf{sonata\_admin\_content}, que es la parte en la cual se muestra el contenido de cada
-acción.
+\myparagraph{Introducción a Sass}
+
+Sass es un lenguaje de hojas de estilo que se compila a CSS básico. Permite, entre otras cosas, utilizar funciones, variables y herencia de selectores. Se utilizó en el desarrollo del template
+de persona por el hecho de
+que al utilizar selectores anidados se simplifica la lectura y comprensión de algunas partes de la implementación. Además, la opción de poder definir variables y funciones facilita mucho el desarrollo.
 
 
+\myparagraph{Implementación}
 
+Se utilizó una distribución de elementos utilizando \textit{grid}, una característica de \textbf{CSS} que permite acomodar elementos en una cuadrícula\@.
 En un principio, se decidió por asignar los elementos de acuerdo a la figura~\ref{fig:image/grid}. Esto quiere decir que se separó el contenido en tres contenedores: el título, la lista de actividades y
 los datos personales.
+
+Se definieron las reglas para distribuir los elementos de esta forma mediante CSS Grid:
+
+\begin{lstlisting}[caption={Definición de filas y columnas de la cuadrícula.\\Fuente: Elaboración propia.}]
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto;
+\end{lstlisting}
+
+De esta manera, se definen dos columnas ocupando todo el espacio disponible y dos filas: una de 50px para el título y otra con un alto automático de manera que se ajuste a la cantidad de actividades\@.
+Una vez definida la cuadrícula, se estableció el espacio que utilizará cada contenedor.
+
+
+\begin{lstlisting}[caption={Orientación del contenedor de actividad en la cuadrícula.\\Fuente: Elaboración propia.}]
+.actividades{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 10px 20px;
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption={Orientación del contenedor del título de la accíon.\\Fuente: Elaboración propia.}]
+.persona-header{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    h3{
+        margin-left: 10px;
+    }
+}
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[caption={Orientación del contenedor de datos personales.\\Fuente: Elaboración propia.}]
+.datos-personales{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 20px;
+}
+\end{lstlisting}
+
+\subsubsection{Template}%
+\label{ssub:template}
+En primer lugar, se comenzó heredando de un template general de \textbf{Sonata-Admin} denominado \textbf{standard\_layout} y se sobrescribió la sección o el bloque
+\textbf{sonata\_admin\_content}, que es la parte en la cual se muestra el contenido de cada acción.
+
 
 
 Dado que entre persona y actividad hay una relación de 1-n, cada \textit{objeto} \textbf{Persona} cuenta con una colección de actividades\@. Por lo tanto, se decidió definir un contenedor para cada una,
@@ -44,9 +95,11 @@ la ruta mediante la función
 \textit{path} que provee \textbf{Twig}\@. Además, se agregó un link que permite, mediante \textbf{Javascript}, expandir o colapsar el contenedor de los datos de actividad\@. Estos links se agregaron en
 el \textit{header} de cada actividad\@.
 
+Cada actividad cuenta con un método en su entidad que comprueba si se encuentra activa o no. Este valor es utilizado en el template para dar indicación visual acerca del estado de la actividad\@.
+
 \subsubsection{Obtención de rutas}%
 \label{ssub:obtención_de_rutas}
-En \textbf{Symfony}, el nombre de una ruta actúa de identificador de la misma\@. Si se quiere generar una ruta, es necesario proveer como parámetro el nombre de la misma.
+En \textbf{Symfony}, el nombre de una ruta actúa de identificador de la misma\@. Si se quiere generar una ruta, es necesario proveer como parámetro el nombre.
 
 
 \textbf{Sonata} define sus rutas de la siguiente forma: \\
@@ -55,17 +108,31 @@ En \textbf{Symfony}, el nombre de una ruta actúa de identificador de la misma\@
 
 Por ende, se optó por generar el nombre de la ruta a partir del nombre de la clase de la entidad. Esto quiere decir que, si se tiene una nombre de entidad igual a \textbf{Secretario}, mediante
 operaciones de
-manipulación de \textit{cadenas}, transformarla de \textbf{Secretario} a \textbf{admin\_app\_secretario\_acción}\@.
+manipulación de \textit{cadenas}, transformarla de \textbf{Secretario} a \textbf{admin\_app\_secretario\_acción}\@.  Para lograr esto, se creó un método en cada entidad, que permite obtener el nombre de
+la ruta, a través del nombre de la clase.
 
 
+\begin{lstlisting}[caption={Obtención del nombre de una ruta.\\Fuente: Elaboración propia.}, label={lst:ruta}]
+    public function getRoute()
+    {
+        $name = get_class($this);//$name=App\Entity\Rector
+        $result = substr($name, 11);//$result=Rector
+        $result = strtolower($result);//$result=rector
+        $result = "admin_app_".$result."_";
+        //$result=admin_app_rector_
+        return [
+            "id" => $this->getId(),
+            "route" => $result
+        ];
+    }
+\end{lstlisting}
 
-Para generar las rutas de edición o visualización de cada elemento, es necesario tener el nombre de la ruta en particular. Para lograr esto, se creó un método en cada entidad, que permite obtener el
-nombre de la ruta, a través del nombre de la clase.
+Para generar una ruta desde un template, es necesario el nombre de la ruta y todos los parámetros que la misma requiera. En el caso del método del ejemplo~\ref{lst:ruta}, se necesita el id como parámetro.
 
 
-
-
-
+\begin{lstlisting}[caption={Generación de una ruta desde un template.\\Fuente: Elaboración propia.}, label={lst:path}]
+{{path(routeData.route ~ "edit", {id: routeData.id})}}
+\end{lstlisting}
 
 % TODO   franco continuar vie 01 nov 2019 20:37:16 -03
 

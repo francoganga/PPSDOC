@@ -2,7 +2,7 @@
 \subsection{Librerías}%
 \label{sub:librerias}
 
-Si bien en muchos de los casos las librerías utilizadas en el desarrollo fueron configuradas por el componente\textbf{Flex}  de \textbf{Symfony}, algunos paquetes
+Si bien en muchos de los casos las librerías utilizadas en el desarrollo fueron configuradas por el componente~\textbf{Flex}  de \textbf{Symfony}, algunos paquetes
 requirieron de una configuración más compleja y son los aquí listados.
 
 \subsubsection{Instalación y Configuración de Sonata-User}%
@@ -58,7 +58,7 @@ que administran estas entidades e información sobre el servicio de correo.
 #src/config/packages/fos_user.yaml
 
 fos_user:
-    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    db_driver: orm
     firewall_name: main
     user_class: Sonata\UserBundle\Entity\BaseUser
     group:
@@ -252,14 +252,6 @@ Si se desea funciones más complejas, es posible definir \textit{normalizadores}
 ~\parencite{api-platform-serialization}
 
 \myparagraph{Modificando el proceso de serialización}
-
-
-Se utilizaron dos grupos de \textit{serialización:}
-
-\begin{itemize}
-    \item \textbf{read:} permite definir el contexto de normalización para acciones de lectura de datos.
-    \item \textbf{write:} define el contexto de normalización para acciones  de escritura de datos.
-\end{itemize}
 
 Mediante anotaciones se agregó cada propiedad relevante a cada acción en particular y se omitieron aquellas propiedades o funciones que no necesitan estar
 presentes o que no se desean exponer a los usuarios.
