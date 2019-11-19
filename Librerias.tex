@@ -79,7 +79,7 @@ fos_user:
 
 
 La única configuración necesaria para el ORM es la definición explícita de cada una de las entidades mapeadas.
-Doctrine cuenta con una característica llamada auto mapping, la cual permite cargar la configuración de entidades almacenadas bajo el directorio Entity/
+Doctrine cuenta con una característica llamada auto mapping, que permite cargar la configuración de entidades almacenadas bajo el directorio Entity/
 de cada uno de los bundles.
 Para la configuración de doctrine, cada entidad utilizada por Sonata-User y FOSUser debe estar definida en su archivo de configuración; pero dado que se
 tiene habilitado la función de auto mapping y cada entidad está bajo un directorio de nombre “Entity” no es necesario agregar nada a la configuración existente.
@@ -171,7 +171,7 @@ Además se especificó la jerarquía de roles y proveedor de usuarios:
 \end{lstlisting}
 
 \newpage
-Por último se define el control de acceso de manera que se pueda ingresar anónimamente a cada página de registro, inicio de sesión, reinicio de contraseña,
+Por último, se define el control de acceso de manera que se pueda ingresar anónimamente a cada página de registro, inicio de sesión, reinicio de contraseña,
 etc.
 También se especifica qué roles tienen permitido ingresar a la parte de administración del sistema.
 
@@ -191,7 +191,7 @@ bin/console sonata:easy-extends:generate SonataUserBundle --dest=src --namespace
 
 
 Esto da como resultado un directorio en \textbf{Application\textbackslash Sonata\textbackslash UserBundle} el cual contiene las entidades a utilizar por las librerías.
-Por último se configuró Sonata-User y FOSUser para que utilicen las nuevas entidades:
+Por último, se configuró Sonata-User y FOSUser para que utilicen las nuevas entidades:
 
 \begin{lstlisting}[caption={Archivo de configuración de Sonata-User.\\Fuente: \sonatainstallation}]
 #src/config/packages/sonata_user.yaml
@@ -233,14 +233,14 @@ se configuró las entidades a exponer, que en este caso, serían todas las entid
 
 API-Platform permite hacer esto mediante la anotación \textbf{ApiResource}. Por defecto, este componente serializa todos los campos y todas aquellas funciones
 que retornen algún valor\@. Probablemente se tengan entidades con funciones o datos que no se quiere exponer a los usuarios. Además, se pueden encontrar
-referencias circulares entre algunas entidades, que fue lo que sucedió entre miembros y roles de proyecto (al tener roles muchos miembros y cada miembro
-en particular tiene un rol). Por este motivo, se decidió configurar la información que es expuesta a través de estas entidades.
+referencias circulares entre algunas entidades, que fue lo que sucedió entre miembros y roles de proyecto (un miembro tiene un rol, y un rol tiene muchos miembros)\@.
+Por este motivo, se decidió configurar la información que es expuesta a través de estas entidades.
 
 \myparagraph{El proceso de serialización}
 
 
 La serialización es el proceso de convertir estructuras de datos u objetos en un formato que puede ser almacenado (por ejemplo, en un archivo o búfer de memoria)
-o transmitido (por ejemplo, a través una conexión de red) y reconstruidos luego (posiblemente en un entorno diferente).~\parencite{serialization}
+o transmitido (por ejemplo, a través una conexión de red) y reconstruido luego (posiblemente en un entorno diferente).~\parencite{serialization}
 
 \begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/serializationWorkflow.png}
@@ -248,17 +248,17 @@ o transmitido (por ejemplo, a través una conexión de red) y reconstruidos lueg
     \label{fig:image/serializationWorkflow}
 \end{figure}
 
-En \textbf{Symfony}, esto es logrado a través del componente \textbf{Serializer}. El proceso en sí, sigue el esquema presentado en la figura
+En \textbf{Symfony} esto es logrado a través del componente \textbf{Serializer}. El proceso en sí, sigue el esquema presentado en la figura
 \ref{fig:image/serializationWorkflow}\@.
 Para la conversión primero se convierte el objeto en un \textit{array} (proceso denominado
 normalización) y luego se convierte al formato específico que se necesite (a este proceso se lo llama codificación).
 
 API-Platform permite modificar la información que se expone a los usuarios mediante grupos de \textit{serialización} y \textit{deserialización}\@. A través del uso de anotaciones
 en cada propiedad de la entidad se puede definir si agregar la propiedad al proceso de normalización o no dependiendo de la acción que se esté realizando.
-Si se desea funciones más complejas, es posible definir \textit{normalizadores} y \textit{codificadores} personalizados o decorar \textit{normalizadores} existentes.
+Si se desean funciones más complejas, es posible definir \textit{normalizadores} y \textit{codificadores} personalizados o decorar \textit{normalizadores} existentes.
 ~\parencite{api-platform-serialization}
 
-\myparagraph{Modificando el proceso de serialización}
+\myparagraph{Modificación del proceso de serialización}
 
 Mediante anotaciones se agregó cada propiedad relevante a cada acción en particular y se omitieron aquellas propiedades o funciones que no necesitan estar
 presentes o que no se desean exponer a los usuarios.
