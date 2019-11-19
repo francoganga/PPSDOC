@@ -46,7 +46,7 @@ persona referenciándola como ``persona.nombre''.
 \label{ssub:admin_proyectadmin_proyecto}
 
 En el sistema se separaron las ABM en dos tipos, en primer lugar se tienen aquellas que representan una relacion de 1-n con otros elementos del sistema, es decir, actividades que pueden
-relizarse por muchas personas, y en segundo lugar están las ABMs de actividades que son realizadas por sólo una persona, las cuales sólo están relacionadas con la tabla \textbf{Persona}\@.
+relizarse por muchas personas, y en segundo lugar están las ABMs de actividades que son realizadas por sólo una persona.
 
 
 En el primer caso, la implementación se hizo utilizando admins \textit{hijos}, una característica de \textbf{Sonata} que permite definir una jerarquía de clases admin que represente un
@@ -116,14 +116,14 @@ Lo interesante en este admin es que se agregó al admin de miembros como \textit
 particular.
 Esto se logra mediante el método \textbf{addChild} (figura~\ref{fig:image/addChild}) y creando un menú del mismo tipo que el definido en el admin de proyectos.
 
-\subsubsection{AMBs Simples}%
+\subsubsection{ABMs Simples y admins \textit{hijos}}%
 \label{ssub:ambs_simples}
 
 Para el caso en el que una actividad solo es completada por una persona o, se trata de un admin \textit{hijo}, la definición del admin sólo contiene los datos de la persona y la actividad\@. Las ABMs
 implementadas de esta manera se listan a continuación:
 
 \begin{itemize}
-        \input{lista_ambs_simples}
+        \input{lista_abms_simples}
 \end{itemize}
 
 \myparagraph{Implementación ABM Simple: Publicación}
@@ -132,24 +132,24 @@ Se implementó la entidad extendiendo de la clase \textbf{Actividad} y se defini
 
 \begin{itemize}
     \item La acción de crear una publicación requiere especificar la persona, la fecha de inicio y la fecha de fin de la actividad.
-    \item Las acciones de listar y visulizar el elemento muestran los datos de la persona y la actividad.
+    \item Las acciones de listar y visualizar el elemento muestran los datos de la persona y la actividad.
 \end{itemize}
 
 Mediante la función \textit{configureFormFields} se establecieron los campos a llenar durante la creación de una Publicación.
 
 \begin{lstlisting}[caption={Definición de campos durante la creación de Publiciaciones.\\Fuente: Elaboración propia}]
-protected function configureFormFields(
-FormMapper $formMapper
-): void
-{
+public function configureFormFields(
+    FormMapper $formMapper
+): void {
     $formMapper
-        ->add('nombre')
         ->add('persona', ModelListType::class)
-        ->add('inicio')
-        ->add('fin')
+        ->add('inicio', DatePickerType::class)
+        ->add('fin', DatePickerType::class)
         ;
 }
 \end{lstlisting}
 
-Se utilizó un tipo de formulario de \textbf{Sonata} llamado \textbf{ModelListType}, que permite seleccionar las personas a través de una lista y se agregó un elemento \textbf{datepicker} para especificar
-las fechas\@. Además, se separó la funcionalidad común en un Trait de PHP de manera que si se necesita algo en específico, se puede sobrescribir los métodos en la clase admin base.
+Se utilizó un tipo de formulario de \textbf{Sonata} llamado \textbf{ModelListType}, que permite seleccionar las personas a través de una lista y se agregó
+un elemento \textbf{Datepicker} para especificar
+las fechas\@. Además, se separó la funcionalidad común en un Trait de PHP de manera que si se necesita algo en específico, se puede sobrescribir los métodos
+en la clase admin base.
