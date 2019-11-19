@@ -152,4 +152,4 @@ FormMapper $formMapper
 \end{lstlisting}
 
 Se utilizó un tipo de formulario de \textbf{Sonata} llamado \textbf{ModelListType}, que permite seleccionar las personas a través de una lista y se agregó un elemento \textbf{datepicker} para especificar
-las fechas.
+las fechas\@. Además, se separó la funcionalidad común en un Trait de PHP de manera que si se necesita algo en específico, se puede sobrescribir los métodos en la clase admin base.
