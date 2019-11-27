@@ -17,7 +17,7 @@ Algunos de estos métodos son:
 \end{itemize}
 
 \noindent
-Además de esto, una clase admin en \textbf{Sonata} permite:
+Además de lo expresado, una clase admin en \textbf{Sonata} permite:
 \begin{itemize}
     \item Validar información
     \item Agregar acciones de acuerdo a eventos de cada entidad
@@ -26,21 +26,21 @@ Además de esto, una clase admin en \textbf{Sonata} permite:
     \item Establecer filtros de búsqueda.
 \end{itemize}
 
-Éstas son las funcionalidades que se utilizaron en este proyecto, sonata cuenta aún con más opciones de configuración.
+Éstas son las funcionalidades que se utilizaron en este proyecto, sin embargo, sonata cuenta aún con más opciones de configuración.
 
-Una clase admin contiene una referencia a la entidad base del mismo a través de un objeto denominado Subject. Sonata utiliza este objeto para realizar
-la mayoría de sus operaciones.
-Para configurar las diferentes secciones del admin, es necesario especificar la información que se desea incluir, esto es posible utilizando el nombre del campo.
+Una clase admin contiene una referencia a la entidad base del mismo a través de un objeto denominado \textbf{subject}, el mismo es utilizado para realizar cada
+operación de alta, baja y modificación de la entidad\@.
 
+Para configurar las diferentes secciones del admin, es necesario especificar la información que se desea incluir, esto es posible utilizando el nombre del campo
+o un método que otorgue acceso a la propiedad en cuestión\@. Si se desea acceder a asociaciones, (datos que representan la relación de una entidad) se puede hacerlo mediante una notación de puntos, por ejemplo:
+si se tiene una instancia de \textbf{Actividad}, la misma tendrá una asociación con una entidad persona\@. Por lo tanto, se puede acceder al nombre de una
+persona referenciándola como ``persona.nombre''.
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/show.png}
     \caption{Ejemplo de definición de campos a mostrar durante la creación/edición.\newline \textbf{Fuente:} Elaboración propia.}
     \label{fig:image/show}
 \end{figure}
 
-Si se desea acceder a asociaciones, (datos que representan la relación de una entidad) se puede hacerlo mediante una notación de puntos, por ejemplo:
-si se tiene una instancia de \textbf{Actividad}, la misma tendrá una asociación con una entidad persona\@. Por lo tanto, se puede acceder al nombre de una
-persona referenciándola como ``persona.nombre''.
 
 \subsubsection{ABMs Compuestas}%
 \label{ssub:admin_proyectadmin_proyecto}
