@@ -45,14 +45,15 @@ persona referenciándola como ``persona.nombre''.
 \subsubsection{ABMs Compuestas}%
 \label{ssub:admin_proyectadmin_proyecto}
 
-En el sistema se separaron las ABM en dos tipos, en primer lugar se tienen aquellas que representan una relacion de 1-n con otros elementos del sistema, es decir, actividades que pueden
-relizarse por muchas personas, y en segundo lugar están las ABMs de actividades que son realizadas por sólo una persona.
+En el sistema se separaron las ABM en dos tipos, en primer lugar se tienen aquellas que representan una relacion de 1-n con otros elementos del sistema,
+es decir, actividades que pueden relizarse por muchas personas; en segundo lugar están las ABMs de actividades que son realizadas por sólo una persona.
 
 
 En el primer caso, la implementación se hizo utilizando admins \textit{hijos}, una característica de \textbf{Sonata} que permite definir una jerarquía de clases admin que represente un
 elemento \textit{padre} compuesto por uno o muchos elementos \textit{hijos}.
 
-Cuando se asigna un admin como \textit{hijo}, se obtiene rutas anidadas, de forma que se puede acceder a acciones del \textit{hijo} desde la vista del padre. Ej: Una ruta
+Cuando se asigna un admin como \textit{hijo} se obtienen rutas anidadas, de forma que se puede acceder a acciones del \textit{hijo} desde la vista del padre.
+Ej: Una ruta
 para acceder a un miembro en particular sería de la forma:\newline \textbf{/miembroproyecto/{id}/(show | edit)}\@.\newline\newline Cuando se accede a los
 miembros de cada proyecto se obtienen rutas de la forma:\newline \textbf{/proyecto/{id}/miembroproyecto/{id}/(show | edit)},
 \newline \textbf{/proyecto/{id}/miembroproyecto/list}\newline
@@ -83,7 +84,7 @@ ellas desde la aplicación web\@. Una buena forma de solucionar este problema es
 de la página que contenga botones mediante los cuales acceder a estas rutas.\parencite{sonata-childAdmin}
 
 
-Para crear un proyecto, se deben proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
+Para crear un proyecto se deben proporcionar los datos de nombre y roles. Los roles de proyecto están representados en la entidad en forma de Colección,
 por lo tanto, se utilizó un tipo de formulario que permite la elección de opciones múltiples y, además, permite agregar nuevas instancias de
 rol (figura~\ref{fig:image/proyecto-editar}).
 
@@ -95,7 +96,7 @@ rol (figura~\ref{fig:image/proyecto-editar}).
 \newpage
 \myparagraph{Miembro de Proyecto}%
 
-Para la definición del admin de miembros de proyecto se lo estableció como un \textit{hijo} del admin Proyecto, esto es porque tiene sentido desde el punto
+Para la definición del admin de miembros de proyecto se lo estableció como un \textit{hijo} del admin Proyecto, esto es debido a que tiene sentido desde el punto
 de vista de la relación que forman. Un proyecto estará integrado por muchos miembros, por lo tanto, al asignar a miembros de proyecto como admin \textit{hijo}
 de Proyecto permite administrar los miembros desde la interfaz de proyectos. Al fin y al cabo, la clase admin de miembros no tiene sentido por sí sola.
 
@@ -109,18 +110,18 @@ de Proyecto permite administrar los miembros desde la interfaz de proyectos. Al 
 
 \myparagraph{Rol de proyecto}%
 
-El admin de roles es muy básico, solo contiene el campo de nombre. Por lo tanto, en cada una de sus acciones se agregó este único campo.
+El admin de roles es muy básico pues solo contiene el campo de nombre. Por lo tanto, en cada una de sus acciones se agregó este único campo.
 
 
-Lo interesante en este admin es que se agregó al admin de miembros como \textit{hijo}. De esta forma se puede listar los miembros que cumplen cada rol en
+De igual manera que con \textbf{Proyecto}, se agregó al admin de miembros como \textit{hijo}. De esta forma se puede listar los miembros que cumplen cada rol en
 particular.
 Esto se logra mediante el método \textbf{addChild} (figura~\ref{fig:image/addChild}) y creando un menú del mismo tipo que el definido en el admin de proyectos.
 
 \subsubsection{ABMs Simples y admins \textit{hijos}}%
 \label{ssub:ambs_simples}
 
-Para el caso en el que una actividad solo es completada por una persona o, se trata de un admin \textit{hijo}, la definición del admin sólo contiene los datos de la persona y la actividad\@. Las ABMs
-implementadas de esta manera se listan a continuación:
+En el caso que una actividad solo fuera completada por una persona, o se trata de un admin \textit{hijo}, la definición del admin solo contiene los
+datos de la persona y la actividad\@. Las ABMs implementadas de esta manera se listan a continuación:
 
 \begin{itemize}
         \input{lista_abms_simples}
@@ -137,7 +138,7 @@ Se implementó la entidad extendiendo de la clase \textbf{Actividad} y se defini
 
 Mediante la función \textit{configureFormFields} se establecieron los campos a llenar durante la creación de una Publicación.
 
-\begin{lstlisting}[caption={Definición de campos durante la creación de Publiciaciones.\\Fuente: Elaboración propia}]
+\begin{lstlisting}[caption={Definición de campos durante la creación de Publicaciones.\\Fuente: Elaboración propia}]
 public function configureFormFields(
     FormMapper $formMapper
 ): void {

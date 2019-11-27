@@ -51,8 +51,8 @@ sonata_user:
 
 \paragraph{FOSUser}~\newline
 
-En cuanto a FOSUser se definió el driver de base de datos como ORM y el sistema de autenticación que utilizará\@. También se especificaron unas clases de base,
-proporcionadas por Sonata-User que se van a utilizar para la generación de las entidades finales de usuario y grupo\@. Por último, se definen los servicios
+En cuanto a FOSUser se definió el driver de base de datos como ORM y el sistema de autenticación que utilizará\@. También se especificaron clases base
+proporcionadas por Sonata-User, que serán utilizadas para la generación de las entidades finales de usuario y grupo\@. Por último, se definen los servicios
 que administran estas entidades e información sobre el servicio de correo.
 
 \begin{lstlisting}[caption={archivo de configuración de FOSUser\\ Fuente: \sonatainstallation.}]
@@ -227,14 +227,15 @@ fos_user:
 \subsubsection{API-Platform}%
 \label{ssub:api_platform}
 
-Para la instalación de esta librería sólo es necesario agregarla a través de \textbf{Composer}, Flex se hace cargo de la configuración\@. Luego de hecho esto,
-se configuró las entidades a exponer, que en este caso, serían todas las entidades que representan datos en el sistema.
+Para la instalación de esta librería sólo es necesario agregarla a través de \textbf{Composer} y Flex se hace cargo de la configuración\@. Luego de realizado
+esto, se configuró las entidades a exponer, que en este caso serían todas las entidades que representan datos en el sistema.
 
 
-API-Platform permite hacer esto mediante la anotación \textbf{ApiResource}. Por defecto, este componente serializa todos los campos y todas aquellas funciones
-que retornen algún valor\@. Probablemente se tengan entidades con funciones o datos que no se quiere exponer a los usuarios. Además, se pueden encontrar
-referencias circulares entre algunas entidades, que fue lo que sucedió entre miembros y roles de proyecto (un miembro tiene un rol, y un rol tiene muchos miembros)\@.
-Por este motivo, se decidió configurar la información que es expuesta a través de estas entidades.
+API-Platform permite definir las entidades a utilizar durante el proceso de serialización mediante anotaciones o archivos de configuración. Por defecto,
+este componente serializa todos los campos y todas aquellas funciones que retornen algún valor\@. Probablemente se tengan entidades con funciones o datos
+que no se quieran exponer a los usuarios. Además, se pueden encontrar referencias circulares entre algunas entidades, que fue lo que sucedió entre miembros
+y roles de proyecto (un miembro tiene un rol, y un rol tiene muchos miembros)\@.  Por este motivo, se decidió configurar la información que es expuesta a
+través de estas entidades.
 
 \myparagraph{El proceso de serialización}
 
@@ -263,6 +264,7 @@ Si se desean funciones más complejas, es posible definir \textit{normalizadores
 Mediante anotaciones se agregó cada propiedad relevante a cada acción en particular y se omitieron aquellas propiedades o funciones que no necesitan estar
 presentes o que no se desean exponer a los usuarios.
 
-Al definir un grupo de serialización se logra que al, agregar una propiedad al contexto de normalización, sólo se serialize las propiedades pertenecientes al grupo en cuestión. Esto quiere decir que, si
-se agrega al contexto de normalización una relación, se serializarán los campos de la entidad relacionada que pertenezcan al grupo de serialización.
+Al definir un grupo de serialización se logra que, al agregar una propiedad al contexto de normalización, sólo se serialice las propiedades pertenecientes
+al grupo en cuestión. Esto significa, que si se agrega una relación al contexto de normalización, se serializarán los campos de la entidad relacionada
+que pertenezcan a dicho grupo.
 
