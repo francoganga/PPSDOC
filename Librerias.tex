@@ -177,7 +177,7 @@ También se especifica qué roles tienen permitido ingresar a la parte de admini
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/acl.png}
-    \caption{Control de acceso\newline \textbf{Fuente:} Recuperado de \url{https://sonata-project.org/bundles/user/master/doc/reference/installation.html}}
+    \caption{Control de acceso\newline \textbf{Fuente:} Recuperado de https://sonata-project.org/bundles/user/master/doc/reference/installation.html}
     \label{fig:image/acl}
 \end{figure}
 
@@ -268,3 +268,20 @@ Al definir un grupo de serialización se logra que, al agregar una propiedad al 
 al grupo en cuestión. Esto significa, que si se agrega una relación al contexto de normalización, se serializarán los campos de la entidad relacionada
 que pertenezcan a dicho grupo.
 
+
+\subsubsection{Guzzle y EightPointsGuzzle}%
+\label{ssub:guzzle}
+
+Guzzle es una librería que facilita la interacción con servicios web, al proveer métodos simples para realizar solicitudes \textbf{HTTP}\@. Su funcionamiento consiste en la creación
+de un objeto llamado \textbf{cliente}, el cual provee acceso al servicio web a utilizar.
+
+
+Eightpoints integra Guzzle con Symfony y permite definir un cliente como servicio de manera que sea posible utilizarlo en cualquier parte de la aplicación.
+
+
+Se utilizaron estas dos librarías para configurar los servicios web a integrar con RUDA. Su configuración requiere de la ruta base de la API para funcionar y es posible definir
+diversas opciones como headers y autenticación.
+
+
+Se definió un cliente Guzzle para el servicio web de mapuche definiendo su ruta base, método de autenticación y headers. Como autenticación se utilizó HTTP digest y se definieron
+ headers que definen el formato a utilizar como \textbf{json}.

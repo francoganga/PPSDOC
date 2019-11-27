@@ -9,24 +9,26 @@ se agregó estilo mediante \textbf{CSS} y una simple animación en \textbf{Javas
 \subsubsection{Introducción Twig}%
 \label{ssub:introducción_twig}
 
-Twig es el motor de \textit{templates} por defecto de \textbf{Symfony}, permite reutilizar elementos de la vista en distintas partes de una aplicación web\@. Además, permite incluir lógica simple a la
-vista de manera que sea fácil de comprender y entender\@. Un motor de \textit{templates} permite, entre otras cosas, reutilizar la estructura básica de una página y cambiar o sobrescribir
-aquello que varía.
+Twig es el motor de \textit{templates} por defecto de \textbf{Symfony}, este permite reutilizar elementos y agregar lógica a la vista en distintas partes de una aplicación web\@.
 
-Twig funciona mediante el uso de \textbf{bloques}, los cuales son etiquetas que delimitan secciones del \textit{template}\@. Estas etiquetas tienen la función de indicarle al motor de \textit{templates}
-que un \textit{template} \textit{hijo} puede sobrescribir estas partes del \textit{template}\@. De esta manera se consigue separar las partes estáticas del sitio, de aquellas que son dinámicas.
+
+Un motor de \textit{templates} posibilita, entre otras cosas, reutilizar la estructura básica de una página y cambiar o sobrescribir aquello que varía.
+
+Twig funciona mediante el uso de \textbf{bloques}, entendidos estos como etiquetas que delimitan secciones del \textit{template}\@. Estas etiquetas tienen la función de indicarle al
+motor de \textit{templates} que un \textit{template} \textit{hijo} puede sobrescribir estas partes del \textit{template}\@. De esta manera se consigue separar las partes estáticas
+del sitio, de aquellas que son dinámicas.
 
 \subsubsection{Estilo}%
 \label{ssub:estilo}
 
-Para la implementación del estilo de la vista, se utilizó \textbf{Sass}\@. El cual es un lenguaje de hojas de estilo que se compila a CSS básico. Permite, entre otras cosas, utilizar funciones, variables y
-herencia de selectores. Se utilizó en el desarrollo del template de persona por el hecho de que al utilizar selectores anidados se simplifica la lectura y comprensión de algunas partes
-de la implementación. Además, la opción de poder definir variables y funciones facilita mucho el desarrollo.
+Para la implementación del estilo de la vista, se utilizó \textbf{Sass}, un preprocesador del lenguaje de hojas de estilo CSS. El mismo permite, entre otras cosas, utilizar
+funciones, variables y herencia de selectores. Se empleó en el desarrollo por el hecho de que al utilizar selectores anidados se simplifica
+la lectura y comprensión de algunas partes de la implementación. Además, la opción de poder definir variables y funciones facilita mucho el desarrollo.
 
 
-Se utilizó una distribución de elementos utilizando \textit{grid}, una característica de \textbf{CSS} que permite acomodar elementos en una cuadrícula\@.
-En un principio, se decidió por asignar los elementos de acuerdo a la figura~\ref{fig:image/grid}. Esto quiere decir que se separó el contenido en tres contenedores: el título, la lista de actividades y
-los datos personales.
+Se diseñó la distribución de elementos utilizando \textit{grid}, una característica de \textbf{CSS} que permite acomodar elementos en una cuadrícula\@.
+En un principio, se decidió por asignar los elementos de acuerdo a la figura~\ref{fig:image/grid}. Esto significa que se separó el contenido en tres contenedores: el título
+, la lista de actividades y los datos personales.
 
 Se definieron las reglas para distribuir los elementos de esta forma mediante CSS Grid:
 
@@ -36,8 +38,8 @@ Se definieron las reglas para distribuir los elementos de esta forma mediante CS
     grid-template-rows: 50px auto;
 \end{lstlisting}
 
-De esta manera, se definen dos columnas ocupando todo el espacio disponible y dos filas: una de 50px para el título y otra con un alto automático de manera que se ajuste a la cantidad de actividades\@.
-Una vez definida la cuadrícula, se estableció el espacio que utilizará cada contenedor.
+De esta manera, se definieron dos columnas ocupando todo el espacio disponible y dos filas: una de 50px para el título y otra con un alto automático de manera que se ajuste a la
+cantidad de actividades\@.  Una vez definida la cuadrícula, se estableció el espacio que utilizará cada contenedor.
 
 
 \begin{lstlisting}[caption={Orientación del contenedor de actividad en la cuadrícula.\\Fuente: Elaboración propia.}]
@@ -75,9 +77,9 @@ En primer lugar, se comenzó heredando de un template general de \textbf{Sonata-
 
 
 
-Dado que entre persona y actividad hay una relación de 1-n, cada \textit{objeto} \textbf{Persona} cuenta con una colección de actividades\@. Por lo tanto, se decidió definir un contenedor para cada una,
-mediante la utilización de un bucle \textit{for} en \textbf{Twig}. Como resultado, se crea un contenedor y se inserta los datos por cada actividad presente en la colección\@. El resultado de esta
-operación puede observarse en la figura~\ref{fig:image/vista_persona}\@.
+Dado que entre persona y actividad hay una relación de 1-n, cada \textit{objeto} \textbf{Persona} cuenta con una colección de actividades\@. Por lo tanto, se decidió definir
+un contenedor para cada una, mediante la utilización de un bucle \textit{for} en \textbf{Twig}. Como resultado, se crea un contenedor y se insertan los datos por cada actividad
+presente en la colección\@. El resultado de esta operación puede observarse en la figura~\ref{fig:image/vista_persona}\@.
 
 
 Cada ítem de actividad está compuesto por un contenedor que actúa de \textit{header}, y otro que almacena los datos\@.
@@ -85,16 +87,15 @@ Cada ítem de actividad está compuesto por un contenedor que actúa de \textit{
 
 
 
-Se agregaron links en cada item de actividad, uno para visualizar la actividad y otro para modificarla, esto se logró obteniendo el nombre de la ruta desde una función en la entidad y generando
-la ruta mediante la función
-\textit{path} que provee \textbf{Twig}\@. Además, se agregó un link que permite, mediante \textbf{Javascript}, expandir o colapsar el contenedor de los datos de actividad\@. Estos links se agregaron en
-el \textit{header} de cada actividad\@.
+Se agregaron links en cada ítem de actividad, uno para visualizar la actividad y otro para modificarla, esto se logró obteniendo el nombre de la ruta desde una función en la
+entidad y generando la ruta mediante la función \textit{path} que provee \textbf{Twig}\@. Además, se agregó un link que permite, mediante \textbf{Javascript}, expandir o colapsar
+el contenedor de los datos de actividad\@.  Estos links se agregaron en el \textit{header} de cada actividad\@.
 
 Cada actividad cuenta con un método en su entidad que comprueba si se encuentra activa o no. Este valor es utilizado en el template para dar indicación visual acerca del estado de la actividad\@.
 
 \subsubsection{Obtención de rutas}%
 \label{ssub:obtención_de_rutas}
-En \textbf{Symfony}, el nombre de una ruta actúa de identificador de la misma\@. Si se quiere generar una ruta, es necesario proveer como parámetro el nombre.
+En \textbf{Symfony}, el nombre de una ruta actúa de identificador de la misma\@. Si se desea generar una ruta, es necesario proveer como parámetro el nombre.
 
 
 \textbf{Sonata} define sus rutas de la siguiente forma: \\
