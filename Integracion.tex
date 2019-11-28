@@ -1,7 +1,43 @@
 \subsection{Integración}
-Para realizar la integración entre los sitemas, se pensó en almacenar en RUDA solo identificadores reconocibles desde los sistemas externos\@. De esta manera, cada dato podrá
-obtener información adicional mediante solicitudes HTTP.
 
+\subsubsection{Eventos}%
+\label{ssub:eventos}
+
+
+Durante la ejecución de una aplicación \textbf{Symfony}, muchos eventos son disparados\@. Es posible esperar por la ocurrencia de estos eventos y responder ejecutando una sección de código a través del
+uso de \textbf{Event Listeners} o \textbf{Event Subscribers}\@. El funcionamiento básico de estos componentes es el mismo, sin embargo, difieren en el algunos conceptos:
+un \textbf{Event Listener} siempre \textit{escuchará} por el evento establecido, en cambio un \textbf{Event Subscriber} solo \textit{escuchará} por eventos a los que está subscripto
+y puede \textit{de-subscribirse} en cualquier momento.
+
+\myparagraph{Doctrine}
+
+Doctrine tiene su propio conjunto de eventos a los cuales se puede escuchar durante en el ciclo de vida de una entidad:
+
+\begin{itemize}
+    \item preRemove: antes de una operacion de borrado.
+    \item postRemove: después de una operacion de borrado.
+    \item prePersist: antes de una operación \textit{persist}.
+    \item postPersist después de una operación \textit{persist}.
+    \item preUpdate: antes de una operación de actualización.
+    \item postUpdate: después de una operación de actualización.
+    \item postLoad: luego que se carga la entidad.
+    \item loadClassMetadata: luego de la carga de la \textit{metadata} de clase.
+    \item onClassMetadataNotFound: cuando no se encuentra la correspondiente \textit{metadata} de la clase.
+    \item preFlush: antes de una operación \textit{flush}.
+    \item onFlush: luego de los cambios en una operación \textit{flush}.
+    \item postFlush: después de una operación \textit{flush}.
+    \item onClear: luego de una operación \textit{clear}.
+\end{itemize}
+
+Doctrine permite definir distintos tipos de \textbf{Event Listeners}. Por un lado están aquellos que \textit{escuchan} por eventos en todas las entidades y por otro lado, es posible definir
+\textit{listeners} específicos para cada entidad.
+
+\subsubsection{Implementación}%
+\label{ssub:implementación}
+
+
+Para realizar la integración entre los sistemas, se pensó en almacenar en RUDA solo identificadores reconocibles desde los sistemas externos\@. De esta manera, cada dato podrá
+obtener información adicional mediante solicitudes HTTP.
 
 Se definió una entidad para representar las personas, sus propiedades se definieron de la siguiente manera:
 
@@ -10,3 +46,22 @@ Se definió una entidad para representar las personas, sus propiedades se defini
     \item \textbf{id\_mapuche:} referencia a legajo en mapuche.
     \item \textbf{id\_guaraní:} referencia a una propiedad identificadora en el sistema guaraní.
 \end{itemize}
+
+Además, se establecieron propiedades no mapeadas por el ORM, de manera de llenarlas con la información obtenida de los sistemas externos.
+
+Cada vez que una entidad de persona es cargada por el ORM, será necesario realizar una solicitud HTTP a \textbf{Mapuche} para obtener los datos\@. Por consiguiente, se hizo uso del evento \textit{postLoad}
+del ciclo de vida de una entidad.
+
+
+Se implementó un \textbf{Entity Listener} para la entidad \textbf{Persona}, esto quiere decir que cada vez que se cargue una entidad de este tipo se ejecutará el método definido en el \textit{listener}\@.
+El algoritmo básico consiste en realizar una petición al sistema \textbf{Mapuche} con su correspondiente identificador, obtener los datos y asignar cada información específica a cada propiedad en la
+persona.
+
+
+\subsubsection{Rendimiento}%
+\label{ssub:rendimiento}
+
+Obtener los datos de esta manera genera una carga adicional al tiempo de respuesta de la solicitud general, en especial en el caso de acciones de listado de personas, ya que por cada persona se realizará
+una solicitud HTTP a \textbf{Mapuche}.
+
+Esto se piensa mitigar principalmente mediante el uso de caché.
