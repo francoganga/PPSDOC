@@ -6,8 +6,7 @@
 
 Durante la ejecución de una aplicación \textbf{Symfony}, muchos eventos son disparados\@. Es posible esperar por la ocurrencia de estos eventos y responder ejecutando una sección de código a través del
 uso de \textbf{Event Listeners} o \textbf{Event Subscribers}\@. El funcionamiento básico de estos componentes es el mismo, sin embargo, difieren en el algunos conceptos:
-un \textbf{Event Listener} siempre \textit{escuchará} por el evento establecido, en cambio un \textbf{Event Subscriber} solo \textit{escuchará} por eventos a los que está subscripto
-y puede \textit{de-subscribirse} en cualquier momento.
+un \textbf{Event Listener} siempre \textit{escuchará} por el evento establecido, en cambio, un \textbf{Event Subscriber} solo \textit{escuchará} por eventos a los que está subscripto\@. Un \textbf{Event Subscriber} puede \textit{de-subscribirse} de un evento en cualquier momento.
 
 \myparagraph{Doctrine}
 
@@ -36,15 +35,15 @@ Doctrine permite definir distintos tipos de \textbf{Event Listeners}. Por un lad
 \label{ssub:implementación}
 
 
-Para realizar la integración entre los sistemas, se pensó en almacenar en RUDA solo identificadores reconocibles desde los sistemas externos\@. De esta manera, cada dato podrá
-obtener información adicional mediante solicitudes HTTP.
+Para realizar la integración entre los sistemas, se pensó en almacenar en RUDA identificadores reconocibles desde los sistemas externos\@. De esta manera,
+cada dato podrá obtener información adicional mediante solicitudes HTTP\@.
 
 Se definió una entidad para representar las personas, sus propiedades se definieron de la siguiente manera:
 
 \begin{itemize}
-    \item \textbf{id:} clave primaria del sistema RUDA.
-    \item \textbf{id\_mapuche:} referencia a legajo en mapuche.
-    \item \textbf{id\_guaraní:} referencia a una propiedad identificadora en el sistema guaraní.
+    \item \textbf{id:} clave primaria del sistema RUDA\@.
+    \item \textbf{id\_mapuche:} referencia a legajo en mapuche\@.
+    \item \textbf{id\_guaraní:} referencia a una propiedad identificadora en el sistema guaraní\@.
 \end{itemize}
 
 Además, se establecieron propiedades no mapeadas por el ORM, de manera de llenarlas con la información obtenida de los sistemas externos.
@@ -65,3 +64,20 @@ Obtener los datos de esta manera genera una carga adicional al tiempo de respues
 una solicitud HTTP a \textbf{Mapuche}.
 
 Esto se piensa mitigar principalmente mediante el uso de caché.
+
+\subsubsection{Inserción de Personas}%
+\label{ssub:vista_de_inserción}
+
+Una vez realizada la integración entre \textbf{RUDA} y \textbf{Mapuche}
+se requirió de una vista que permita agregar personas desde
+\textbf{Mapuche}\@. Por lo tanto, se procedió a implementar una pantalla
+de búsqueda por nombre que haga posible agregar personas a través de los
+resultados\@. El funcionamiento básico sería el siguiente: se listan los
+resultados mediante \textbf{Twig} y se generan botones para agregar o
+visualizar (en caso que el resultado ya se encuentre agregado) los datos
+\@. El botón para insertar el resultado, funciona mediante
+\textit{javascript} y \textit{Ajax}: se prepara un objeto \textit{json},
+el cual al momento de agregar el dato es enviado a la ruta de inserción
+de personas de \textbf{Api-Platform}\@. En cuanto al estilo de la vista,
+se emuló el template de \textbf{Sonata} utilizado para listar elementos
+en una tabla.
