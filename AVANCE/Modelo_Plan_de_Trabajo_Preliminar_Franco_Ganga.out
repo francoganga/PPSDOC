@@ -1,0 +1,25 @@
+\BOOKMARK [1][-]{section.1}{Desarrollo}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Introducci\363n Symfony}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Modelado}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Introducci\363n a Doctrine}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Actividad}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Miembro de Proyecto}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Proyecto}{subsection.1.2}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.5}{Rol de Proyecto}{subsection.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.3}{Definici\363n de ABMs - Clases Admin}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.3.1}{ABMs Compuestas}{subsection.1.3}% 10
+\BOOKMARK [3][-]{subsubsection.1.3.2}{ABMs Simples y admins hijos}{subsection.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.4}{Librer\355as}{section.1}% 12
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Instalaci\363n y Configuraci\363n de Sonata-User}{subsection.1.4}% 13
+\BOOKMARK [3][-]{subsubsection.1.4.2}{API-Platform}{subsection.1.4}% 14
+\BOOKMARK [3][-]{subsubsection.1.4.3}{Guzzle y EightPointsGuzzle}{subsection.1.4}% 15
+\BOOKMARK [2][-]{subsection.1.5}{Vista de Persona}{section.1}% 16
+\BOOKMARK [3][-]{subsubsection.1.5.1}{Introducci\363n Twig}{subsection.1.5}% 17
+\BOOKMARK [3][-]{subsubsection.1.5.2}{Estilo}{subsection.1.5}% 18
+\BOOKMARK [3][-]{subsubsection.1.5.3}{Template}{subsection.1.5}% 19
+\BOOKMARK [3][-]{subsubsection.1.5.4}{Obtenci\363n de rutas}{subsection.1.5}% 20
+\BOOKMARK [2][-]{subsection.1.6}{Integraci\363n}{section.1}% 21
+\BOOKMARK [3][-]{subsubsection.1.6.1}{Eventos}{subsection.1.6}% 22
+\BOOKMARK [3][-]{subsubsection.1.6.2}{Implementaci\363n}{subsection.1.6}% 23
+\BOOKMARK [3][-]{subsubsection.1.6.3}{Rendimiento}{subsection.1.6}% 24
+\BOOKMARK [3][-]{subsubsection.1.6.4}{Inserci\363n de Personas}{subsection.1.6}% 25

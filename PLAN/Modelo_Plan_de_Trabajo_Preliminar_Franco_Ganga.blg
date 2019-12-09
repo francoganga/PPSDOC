@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{framed}
+\usepackage[headheight=26pt]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{fancyhdr}% http://ctan.org/pkg/fanychdr
+\usepackage{lastpage}
+\newcommand{\mybox}[1]{
+\noindent\fbox{
+    \parbox[t][]{14.5cm}{
+        #1
+    }
+}~\\~\\~\\
+}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\def\arraystretch{1.5}
+\fancypagestyle{myheader}{%
+  \fancyhf{}% clear header/footer
+  \fancyhead[L]{
+    \begin{tabular}{|P{7cm}|P{7cm}|}
+            \hline
+            \includegraphics[width=5cm]{/home/unaj/unaj-header.png} & Pr\'{a}ctica Profesional Supervisada \\
+            Instituto de Ingenier\'{i}a y Agronom\'{i}a Ingenier\'{i}a en Inform\'{a}tica  & \textbf{(PPS)} \\
+            ~ & \multicolumn{1}{|r|}{P\'{a}gina~\thepage~de~\pageref{LastPage}} \\
+            \hline
+        \end{tabular}
+  }
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+\setlength{\headheight}{93pt}
+\pagestyle{myheader}
+\begin{document}
+\noindent\fbox{
+    \parbox[t][]{14.5cm}{
+        \textbf{DATOS DEL ESTUDIANTE}
+
+
+        Apellido y Nombres:\newline
+        DNI:\newline
+        Nº de Legajo:\newline
+        Correo electr\'{o}nico:\newline
+        Cantidad de materias aprobadas al comienzo de la PPS:\newline
+        PPS enmarcada en art\'{i}culo (4 \'{o} 7) de la Resoluci\'{o}n (CS) 103/16. (en caso de ser art\'{i}culo 7 aclarar en cu\'{a}l de las dos alternativas posibles se encuadra)\newline
+        Periodo en que se realiz\'{o} la PPS:
+    }
+}~\\~\\~\\
+\noindent\fbox{
+    \parbox[t][]{14.5cm}{
+        \textbf{DOCENTE SUPERVISOR}  \newline
+        Apellido y Nombres: \newline
+        Correo electr\'{o}nico: 
+    }
+}~\\~\\
+
+\noindent\fbox{
+    \parbox[t][]{14.5cm}{
+        \textbf{DOCENTE  TUTOR DEL TALLER DE APOYO A LA PRODUCCI\'{O}N DE TEXTOS ACAD\'{E}MICOS DE LA UNAJ}\newline
+        Apellido y Nombres: \newline
+        Correo electr\'{o}nico: 
+    }
+}~\\~\\
+
+\mybox{
+\textbf{DATOS DE LA ORGANIZACI\'{O}N DONDE SE REALIZA LA PPS}\newline
+Nombre o Raz\'{o}n Social:\newline
+Direcci\'{o}n:\newline
+Tel\'{e}fono: \newline
+Sector:
+}
+\mybox{
+
+\textbf{TUTOR DE LA ORGANIZACIONAL}\newline
+Apellido y Nombres: \newline
+Correo electr\'{o}nico:
+}
+\vfill
+\noindent\begin{tabular}{|P{3.3cm}|P{3.3cm}|P{3.3cm}|P{3.3cm}|}
+\hline
+Firma Estudiante: & Firma Docente Supervisor: & Firma docente tutor TAPTA: & Firma tutor Organizacional: \\
+~ & ~ & ~ & ~ \\
+~ & ~ & ~ & ~ \\
+\hline
+\end{tabular}
+
+\newpage
+
+\mybox{
+    \textbf{FIRMA DEL COORDINADOR DE LA CARRERA}
+}
+\mybox{
+    \textbf{DESARROLLO:}
+}
+
+
+\mybox{
+    \textbf{REFLEXI\'{O}N SOBRE LA PR\'{A}CTICA PROFESIONAL SUPERVISADA COMO ESPACIO DE FORMACI\'{O}N: }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

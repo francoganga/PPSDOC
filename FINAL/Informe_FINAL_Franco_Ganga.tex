@@ -1,0 +1,257 @@
+\documentclass[12pt]{article}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+
+\usepackage[headheight=26pt, textheight=7in, footskip=20pt]{geometry}% http://ctan.org/pkg/geometry
+
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{fancyhdr}% http://ctan.org/pkg/fanychdr
+\usepackage{lastpage}
+\newcommand{\myboxp}[1]{
+\noindent\fbox{
+    \parbox[t][]{14.5cm}{
+        #1
+    }
+}~\\~\\~\\
+}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\def\arraystretch{1.5}
+\fancypagestyle{myheader}{%
+  \fancyhf{}% clear header/footer
+  \fancyhead[L]{
+    \begin{tabular}{|P{7.1cm}|P{7.1cm}|}
+            \hline
+            ~ & ~ \\
+            \includegraphics[width=5cm]{/home/unaj/unaj-header.png} & Pr\'{a}ctica Profesional Supervisada \\
+            Instituto de Ingenier\'{i}a y Agronom\'{i}a Ingenier\'{i}a en Inform\'{a}tica  & \textbf{(PPS)} \\
+            ~ & \multicolumn{1}{r|}{P\'{a}gina~\thepage~de~\pageref{LastPage}} \\
+            \hline
+        \end{tabular}
+  }
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+\setlength{\headheight}{126pt}
+\pagestyle{myheader}
+
+
+
+\usepackage{indentfirst}
+\usepackage{framed}
+\usepackage{mathptmx}
+\usepackage{csquotes}
+\usepackage{float}
+\linespread{1.241}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber, style=apa, autocite=inline, hyperref=false]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\usepackage{graphicx}
+\addbibresource{bibliografia.bib}
+\usepackage{caption}
+\usepackage{color}
+\captionsetup{
+    justification=raggedright,singlelinecheck=false, labelfont=bf
+}
+\usepackage{hyperref}
+\hypersetup{
+    urlcolor=blue,
+    colorlinks=true,
+    citecolor=blue,
+    linkcolor=black
+}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    morekeywords={
+        fos_user:,
+        resource:,
+        db_driver:,
+        firewall_name:,
+        user_class:,
+        group:,
+        group_class:,
+        group_manager:,
+        service:,
+        user_manager:,
+        from_email:,
+        address:,
+        sender_name:,
+        sonata_user:,
+        manager_type:,
+        sonata_user_admin_security:,
+        sonata_user_admin_resetting:,
+        admin:,
+        pattern:,
+        context:,
+        form_login:,
+        provider:,
+        login_path:,
+        use_forward:,
+        check_path:,
+        failure_path:,
+        default_target_path:,
+        logout:,
+        path:,
+        target:,
+        anonymous:,
+        main:,
+        role_hierarchy:,
+        ROLE_ADMIN:,
+        ROLE_SUPER_ADMIN:,
+        SONATA:,
+        providers:,
+        fos_userbundle:,
+        id:,
+        encoders:,
+        access_control:,
+        class:,
+        user:
+    }
+}
+
+
+\renewcommand*{\lstlistingname}{Ejemplo de código}
+
+\renewcommand{\arraystretch}{1.5}
+
+\lstset{
+    style=mystyle,
+    alsoletter={:}
+}
+
+
+\author{Franco Ganga}
+\title{Proyecto\ RUDA:\ Registro\ unificado\ de\ actividades}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
+
+\setlength{\parindent}{1cm}
+
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\newcommand{\sonatainstallation}{https://sonata-project.org/bundles/user/master/doc/reference/installation.html}
+
+
+
+\begin{document}
+\centerline{\large{PRÁCTICA PROFESIONAL SUPERVISADA (PPS)}}
+\centerline{\large{Registro Unificado de Actividades}}
+\centerline{\large{Informe Final}}
+\begin{framed}
+        \noindent\textbf{DATOS DEL ESTUDIANTE}\newline
+        Apellido y Nombres: Ganga Franco Manuel\newline
+        DNI: 37837656\newline
+        Nº de Legajo: 3917\newline
+        Correo electr\'{o}nico: fganga@ymail.com\newline
+        Cantidad de materias aprobadas al comienzo de la PPS: 45\newline
+        PPS enmarcada en art\'{i}culo: 4 \newline
+        Periodo en que se realiz\'{o} la PPS: Año 2019
+\end{framed}
+
+\begin{framed}
+        \noindent\textbf{DOCENTE SUPERVISOR}  \newline
+        Apellido y Nombres: Morales Martín \newline
+        Correo electr\'{o}nico: martin.morales@unaj.edu.ar
+\end{framed}
+
+\vfill
+\noindent\begin{tabular}{|P{3.3cm}|P{3.3cm}|P{3.3cm}|P{3.3cm}|}
+\hline
+Firma Estudiante: & Firma Docente Supervisor: & Firma docente tutor TAPTA: & Firma tutor Organizacional: \\
+~ & ~ & ~ & ~ \\
+~ & ~ & ~ & ~ \\
+\hline
+\end{tabular}
+\newpage
+
+\begin{framed}
+        \noindent\textbf{DOCENTE  TUTOR DEL TALLER DE APOYO A LA PRODUCCI\'{O}N DE TEXTOS ACAD\'{E}MICOS DE LA UNAJ}\newline
+        Apellido y Nombres: Lavigna Lia \newline
+        Correo electr\'{o}nico: lialavigna@gmail.com
+\end{framed}
+
+\begin{framed}
+\noindent\textbf{DATOS DE LA ORGANIZACI\'{O}N DONDE SE REALIZA LA PPS}\newline
+Nombre o Raz\'{o}n Social: Universidad Nacional Arturo Jauretche\newline
+Direcci\'{o}n: Av. Calchaquí 6200\newline
+Tel\'{e}fono: 4275-6100 \newline
+Sector: Informática
+\end{framed}
+
+\begin{framed}
+\noindent\textbf{TUTOR DE LA ORGANIZACIONAL}\newline
+Apellido y Nombres: Gustavo Pilla \newline
+Correo electr\'{o}nico: gpilla@unaj.edu.ar
+\end{framed}
+
+\begin{framed}
+    \noindent\textbf{FIRMA DEL COORDINADOR DE LA CARRERA}
+\end{framed}
+\vfill
+\noindent\begin{tabular}{|P{3.3cm}|P{3.3cm}|P{3.3cm}|P{3.3cm}|}
+\hline
+Firma Estudiante: & Firma Docente Supervisor: & Firma docente tutor TAPTA: & Firma tutor Organizacional: \\
+~ & ~ & ~ & ~ \\
+~ & ~ & ~ & ~ \\
+\hline
+\end{tabular}
+\newpage
+
+\tableofcontents
+\newpage
+\input{Desarrollo}
+\input{Conclusion}
+\vfill
+\noindent\begin{tabular}{|P{3.3cm}|P{3.3cm}|P{3.3cm}|P{3.3cm}|}
+\hline
+Firma Estudiante: & Firma Docente Supervisor: & Firma docente tutor TAPTA: & Firma tutor Organizacional: \\
+~ & ~ & ~ & ~ \\
+\hline
+\end{tabular}
+
+
+\newpage
+\nocite{*}
+\printbibliography
+
+\newpage
+
+\listoffigures
+
+
+
+
+\end{document}

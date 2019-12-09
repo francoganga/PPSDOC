@@ -1,0 +1,20 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[1] Config.pm:305> INFO - Logfile is 'Informe_De_Avance_Franco_Ganga.blg'
+[37] biber:313> INFO - === lun dic  9, 2019, 14:15:24
+[61] Biber.pm:371> INFO - Reading 'Informe_De_Avance_Franco_Ganga.bcf'
+[139] Biber.pm:857> INFO - Found 6 citekeys in bib section 0
+[157] Biber.pm:3981> INFO - Processing section 0
+[171] Biber.pm:4154> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[173] bibtex.pm:1468> INFO - LaTeX decoding ...
+[180] bibtex.pm:1294> INFO - Found BibTeX data source 'bibliografia.bib'
+[182] Utils.pm:169> WARN - year field 'sf' in entry 'symfony-def' is not an integer - this will probably not sort properly.
+[183] Utils.pm:169> WARN - year field 'sf' in entry 'doctrine-inheritance' is not an integer - this will probably not sort properly.
+[184] Utils.pm:169> WARN - year field 'sf' in entry 'sonata-childAdmin' is not an integer - this will probably not sort properly.
+[185] Utils.pm:169> WARN - year field 'sf' in entry 'sonata-user' is not an integer - this will probably not sort properly.
+[186] Utils.pm:169> WARN - year field 'sf' in entry 'api-platform-serialization' is not an integer - this will probably not sort properly.
+[204] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[205] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[205] Biber.pm:3809> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[216] bbl.pm:617> INFO - Writing 'Informe_De_Avance_Franco_Ganga.bbl' with encoding 'UTF-8'
+[218] bbl.pm:720> INFO - Output to Informe_De_Avance_Franco_Ganga.bbl
+[218] Biber.pm:110> INFO - WARNINGS: 5

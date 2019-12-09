@@ -1,0 +1,220 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{symfony-def}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{About Symfony Project}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://symfony.com/about
+      \endverb
+      \verb{url}
+      \verb https://symfony.com/about
+      \endverb
+    \endentry
+    \entry{sonata-childAdmin}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Create child admins}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://symfony.com/doc/master/bundles/SonataAdminBundle/reference/child_admin.html
+      \endverb
+      \verb{url}
+      \verb https://symfony.com/doc/master/bundles/SonataAdminBundle/reference/child_admin.html
+      \endverb
+    \endentry
+    \entry{grid}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{CSS Grid layout}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
+      \endverb
+    \endentry
+    \entry{8p-doc}{misc}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{EighPointsGuzzle}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/8p/EightPointsGuzzleBundle#usage
+      \endverb
+      \verb{url}
+      \verb https://github.com/8p/EightPointsGuzzleBundle#usage
+      \endverb
+    \endentry
+    \entry{git-doc}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Git Documentation}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://git-scm.com/doc
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/doc
+      \endverb
+    \endentry
+    \entry{guzzle-doc}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Guzzle Documentation}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb http://docs.guzzlephp.org/en/stable/
+      \endverb
+      \verb{url}
+      \verb http://docs.guzzlephp.org/en/stable/
+      \endverb
+    \endentry
+    \entry{doctrine-inheritance}{misc}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Inheritance Mapping}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/inheritance-mapping.html
+      \endverb
+      \verb{url}
+      \verb https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/inheritance-mapping.html
+      \endverb
+    \endentry
+    \entry{tex-stackexchange}{misc}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{LaTeX Stack Exchange}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://tex.stackexchange.com/
+      \endverb
+      \verb{url}
+      \verb https://tex.stackexchange.com/
+      \endverb
+    \endentry
+    \entry{php-doc}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{PHP Documentation}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://www.php.net/docs.php
+      \endverb
+      \verb{url}
+      \verb https://www.php.net/docs.php
+      \endverb
+    \endentry
+    \entry{serialization}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Serialization}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Serialization
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Serialization
+      \endverb
+    \endentry
+    \entry{sonata-project}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Sonata Project Documentation}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://sonata-project.org
+      \endverb
+      \verb{url}
+      \verb https://sonata-project.org
+      \endverb
+    \endentry
+    \entry{sonata-user}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Sonata-user Installation}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://sonata-project.org/bundles/user/master/doc/reference/installation.html
+      \endverb
+      \verb{url}
+      \verb https://sonata-project.org/bundles/user/master/doc/reference/installation.html
+      \endverb
+    \endentry
+    \entry{api-platform-serialization}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{The Serialization Process}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://api-platform.com/docs/core/serialization/
+      \endverb
+      \verb{url}
+      \verb https://api-platform.com/docs/core/serialization/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
