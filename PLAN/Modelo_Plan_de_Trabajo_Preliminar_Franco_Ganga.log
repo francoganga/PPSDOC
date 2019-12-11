@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.13)  9 DEC 2019 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.13)  11 DEC 2019 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,18 +1098,18 @@ e
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* v-part:(T,H,B)=(115.63199pt, 505.89pt, 173.448pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=430.00462pt
-* \textheight=556.47656pt
+* \textheight=505.89pt
 * \oddsidemargin=19.8752pt
 * \evensidemargin=19.8752pt
-* \topmargin=-27.87262pt
+* \topmargin=-7.638pt
 * \headheight=126.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
-* \footskip=60.0pt
+* \footskip=20.0pt
 * \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
@@ -1208,60 +1208,73 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 201.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+Package Fancyhdr Warning: \headheight is too small (126.0pt): 
+ Make it at least 139.57832pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  </home/unaj/unaj-header.png (PNG copy)>]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 227.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-
-[2] (../Introduccion.tex
+ [2] (../Introduccion.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 38.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 36.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [3]) (./Tareas.tex (./entidades.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 3.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 1.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [4])
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
- []
-
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 24.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[5] (./lista_abm.tex
+[4]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 20.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+ [5])
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+(./lista_abm.tex
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 11.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [6]) (./lista_abm_nopoliticas.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 18.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 8.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [7]) (./librerias.tex)
+ [7]) (./librerias.tex
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 1.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+
+[8])
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 52.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-
-[8]) 
+ [9]) 
 AED: lastpage setting LastPage
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 239.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[9]
+[10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
  (./Modelo_Plan_de_Trabajo_Preliminar_Franco_Ganga.aux
@@ -1280,9 +1293,9 @@ nco_Ganga.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18260 strings out of 494861
- 294210 string characters out of 6178803
- 882543 words of memory out of 5000000
+ 18261 strings out of 494861
+ 294217 string characters out of 6178803
+ 882563 words of memory out of 5000000
  21283 multiletter control sequences out of 15000+600000
  29973 words of font info for 46 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -1290,11 +1303,11 @@ Here is how much of TeX's memory you used:
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb>
-Output written on Modelo_Plan_de_Trabajo_Preliminar_Franco_Ganga.pdf (9 pages, 
-194191 bytes).
+Output written on Modelo_Plan_de_Trabajo_Preliminar_Franco_Ganga.pdf (10 pages,
+ 195104 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 121 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

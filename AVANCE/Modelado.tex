@@ -9,12 +9,6 @@ recursos \textit{API-Platform}.
 Con Doctrine, cada objeto PHP que se requiera persistir a la base de datos, necesita estar definido en un archivo PHP que
 contiene información referente a tipos de dato y relaciones entre entidades. A este archivo se lo denomina entidad.
 
-\begin{figure}[h]
-    \includegraphics[width=1\linewidth]{image/entidad-doctrine.png}
-    \caption{Ejemplo básico de una entidad.\newline \textbf{Fuente:} Recuperado de \url{www.doctrine-project.org/
-    projects/doctrine-orm/en/2.6/reference/basic-mapping.html}}%
-    \label{fig:image/entidad-doctrine}
-\end{figure}
 Una relación en \textbf{Doctrine} está formado por dos entidades. Una de ellas actúa como el lado propietario de la relación y la otra como el inverso\@.
 El lado propietario de la relación es aquel en el que \textbf{Doctrine} verifica si hubo cambios.
 Existen dos tipos de mapeo de relaciones, bi-direccionales y uni-direccionales\@.
@@ -23,6 +17,12 @@ a través del lado propietario\@.
 Al trabajar con relaciones, se debe tener en cuenta la manera en que Doctrine comprueba por cambios en los datos, ya que cambios persistidos en el lado
 inverso de la relación serán ignorados por el ORM al momento de actualizar información a la base de datos.
 
+\begin{figure}[H]
+    \includegraphics[width=1\linewidth]{image/entidad-doctrine.png}
+    \caption[Ejemplo básico de una entidad]{Ejemplo básico de una entidad.\newline \textbf{Fuente:} Recuperado de www.doctrine-project.org/
+    projects/doctrine-orm/en/2.6/reference/basic-mapping.html}%
+    \label{fig:image/entidad-doctrine}
+\end{figure}
 
 
 \subsubsection{Actividad}%
@@ -31,9 +31,11 @@ Se modeló el siguiente esquema de acuerdo a la información recibida por parte 
 Además, se pensó en utilizar herencia para la definición de las actividades, de esta manera cada cargo o actividad en particular
 heredaría toda característica común de una entidad padre.
 
-\begin{figure}[h]
+\begin{figure}[H]
+    \centering
     \includegraphics[scale=1]{image/actividad-modelo.png}
-    \caption{Ejemplo de la definición de un cargo\newline \textbf{Fuente:} Elaboración propia}%
+    \captionsetup{justification=centering}
+    \caption[Ejemplo de la definición de un cargo]{Ejemplo de la definición de un cargo.\newline \textbf{Fuente:} Elaboración propia}%
     \label{fig:image/actividad-modelo}
 \end{figure}
 El primer paso realizado para la definición de cada cargo o actividad fue la creación de la entidad \textit{Actividad}, la cual contendrá
@@ -54,9 +56,9 @@ Esta columna identifica el tipo de entidad, por ejemplo: una
 fila con un valor de ``director instituto'' significa que es una actividad del tipo DirectorInstituto\@.
 Si no se provee el mapeo correspondiente, doctrine lo generará automáticamente utilizando el nombre de cada clase entidad en minúscula\@. \parencite{doctrine-inheritance}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/discriminator-doctrine.png}
-    \caption{Columna \textbf{discr} utilizada como discriminator\newline \textbf{Fuente:} Elaboración propia, impresión de pantalla del código fuente.}
+    \caption[Columna \textbf{discr} utilizada como discriminator]{Columna \textbf{discr} utilizada como discriminator.\newline \textbf{Fuente:} Elaboración propia, impresión de pantalla del código fuente.}
     \label{fig:image/discriminator-doctrine.png}
 \end{figure}
 \newpage
@@ -64,7 +66,7 @@ Se agregó la correspondiente metadata de la herencia en \textit{Actividad} y se
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/discr.png}
-    \caption{Mapeo de la columna \textbf{discriminator}\newline \textbf{Fuente:} Elaboración propia, impresión de pantalla del código fuente.}
+    \caption[Mapeo de la columna \textbf{discriminator}]{Mapeo de la columna \textbf{discriminator}.\newline \textbf{Fuente:} Elaboración propia, impresión de pantalla del código fuente.}
     \label{fig:image/discr.png}
 \end{figure}
 
@@ -78,13 +80,13 @@ Con \textit{roles} sucede lo mismo, ya que cada instancia de miembro debe poseer
 
 \begin{figure}[h]
     \includegraphics[width=1\linewidth]{image/mpr-new.png}
-    \caption{Diagrama que representa la relación entre miembro, rol y proyecto\newline \textbf{Fuente:} Elaboración propia utilizando una herramienta online de elaboración de diagramas.}
+    \caption[Diagrama que representa la relación entre miembro, rol y proyecto]{Diagrama que representa la relación entre miembro, rol y proyecto.\newline \textbf{Fuente:} Elaboración propia utilizando una herramienta online de elaboración de diagramas.}
     \label{fig:image/mpr-new}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/miembros.png}
-    \caption{Metadata de mapeo de relaciones de miembro de proyecto.\newline \textbf{Fuente:} Elaboración propia.}
+    \caption[Metadata de mapeo de relaciones de miembro de proyecto]{Metadata de mapeo de relaciones de miembro de proyecto.\newline \textbf{Fuente:} Elaboración propia.}
     \label{fig:image/miembros}
 \end{figure}
 

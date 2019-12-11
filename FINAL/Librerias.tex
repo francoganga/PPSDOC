@@ -22,7 +22,8 @@ Para este proceso se siguieron los pasos establecidos en la documentación de \t
     \label{fig:image/adminLogin}
 \end{figure}
 
-Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
+\newpage
+\textbf{Configuración básica:} Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
 
 \begin{itemize}
     \item \textbf{Doctrine:} se debe definir el mapeo de entidades necesarias para el funcionamiento de la librería.
@@ -49,7 +50,7 @@ sonata_user:
 
 \end{lstlisting}
 
-\paragraph{FOSUser}~\newline
+\newpage \paragraph{FOSUser}~\newline
 
 En cuanto a FOSUser se definió el driver de base de datos como ORM y el sistema de autenticación que utilizará\@. También se especificaron clases base
 proporcionadas por Sonata-User, que serán utilizadas para la generación de las entidades finales de usuario y grupo\@. Por último, se definen los servicios
@@ -75,6 +76,7 @@ fos_user:
 
 \end{lstlisting}
 
+\newpage
 \myparagraph{Doctrine}
 
 
@@ -204,7 +206,6 @@ sonata_user:
 
 \end{lstlisting}
 
-\newpage
 \begin{lstlisting}[caption=Archivo de configuración de FOSUser.\\Fuente: \sonatainstallation]
 #src/config/packages/fos_user.yaml
 
@@ -224,6 +225,7 @@ fos_user:
 
 \end{lstlisting}
 
+\newpage
 \subsubsection{API-Platform}%
 \label{ssub:api_platform}
 
@@ -237,6 +239,7 @@ que no se quieran exponer a los usuarios. Además, se pueden encontrar referenci
 y roles de proyecto (un miembro tiene un rol, y un rol tiene muchos miembros)\@.  Por este motivo, se decidió configurar la información que es expuesta a
 través de estas entidades.
 
+\newpage
 \myparagraph{El proceso de serialización}
 
 

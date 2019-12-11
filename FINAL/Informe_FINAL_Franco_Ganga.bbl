@@ -79,21 +79,6 @@
       \verb https://github.com/8p/EightPointsGuzzleBundle#usage
       \endverb
     \endentry
-    \entry{git-doc}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labeltitlesource}{title}
-      \field{title}{Git Documentation}
-      \field{year}{sf}
-      \verb{urlraw}
-      \verb https://git-scm.com/doc
-      \endverb
-      \verb{url}
-      \verb https://git-scm.com/doc
-      \endverb
-    \endentry
     \entry{guzzle-doc}{misc}{}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
@@ -124,34 +109,19 @@
       \verb https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/inheritance-mapping.html
       \endverb
     \endentry
-    \entry{tex-stackexchange}{misc}{}
-      \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+    \entry{jquery-doc}{misc}{}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labeltitlesource}{title}
-      \field{title}{LaTeX Stack Exchange}
+      \field{title}{Jquery API Documentation}
       \field{year}{sf}
       \verb{urlraw}
-      \verb https://tex.stackexchange.com/
+      \verb https://api.jquery.com/
       \endverb
       \verb{url}
-      \verb https://tex.stackexchange.com/
-      \endverb
-    \endentry
-    \entry{php-doc}{misc}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labeltitlesource}{title}
-      \field{title}{PHP Documentation}
-      \field{year}{sf}
-      \verb{urlraw}
-      \verb https://www.php.net/docs.php
-      \endverb
-      \verb{url}
-      \verb https://www.php.net/docs.php
+      \verb https://api.jquery.com/
       \endverb
     \endentry
     \entry{serialization}{misc}{}
@@ -212,6 +182,21 @@
       \endverb
       \verb{url}
       \verb https://api-platform.com/docs/core/serialization/
+      \endverb
+    \endentry
+    \entry{twig-doc}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{title}{Twig Documentation}
+      \field{year}{sf}
+      \verb{urlraw}
+      \verb https://twig.symfony.com/doc/2.x/
+      \endverb
+      \verb{url}
+      \verb https://twig.symfony.com/doc/2.x/
       \endverb
     \endentry
   \enddatalist

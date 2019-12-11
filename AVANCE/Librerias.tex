@@ -18,11 +18,12 @@ Para este proceso se siguieron los pasos establecidos en la documentación de \t
 
 \begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/adminLogin.png}
-    \caption{Pantalla de login de Sonata-User\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web}
+    \caption[Pantalla de login de Sonata-User]{Pantalla de login de Sonata-User.\newline \textbf{Fuente:} Elaboración propia, captura de pantalla de la aplicación web}
     \label{fig:image/adminLogin}
 \end{figure}
 
-Configuración básica: Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
+\newpage
+\textbf{Configuración básica:} Sonata User involucra varias librerías y elementos del sistema que deben ser configurados adecuadamente, estos son:
 
 \begin{itemize}
     \item \textbf{Doctrine:} se debe definir el mapeo de entidades necesarias para el funcionamiento de la librería.
@@ -49,7 +50,7 @@ sonata_user:
 
 \end{lstlisting}
 
-\paragraph{FOSUser}~\newline
+\newpage \paragraph{FOSUser}~\newline
 
 En cuanto a FOSUser se definió el driver de base de datos como ORM y el sistema de autenticación que utilizará\@. También se especificaron clases base
 proporcionadas por Sonata-User, que serán utilizadas para la generación de las entidades finales de usuario y grupo\@. Por último, se definen los servicios
@@ -75,6 +76,7 @@ fos_user:
 
 \end{lstlisting}
 
+\newpage
 \myparagraph{Doctrine}
 
 
@@ -175,9 +177,9 @@ Por último, se define el control de acceso de manera que se pueda ingresar anó
 etc.
 También se especifica qué roles tienen permitido ingresar a la parte de administración del sistema.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/acl.png}
-    \caption{Control de acceso\newline \textbf{Fuente:} Recuperado de https://sonata-project.org/bundles/user/master/doc/reference/installation.html}
+    \caption[Control de acceso]{Control de acceso.\newline \textbf{Fuente:} Recuperado de https://sonata-project.org/bundles/user/master/doc/reference/installation.html}
     \label{fig:image/acl}
 \end{figure}
 
@@ -204,7 +206,6 @@ sonata_user:
 
 \end{lstlisting}
 
-\newpage
 \begin{lstlisting}[caption=Archivo de configuración de FOSUser.\\Fuente: \sonatainstallation]
 #src/config/packages/fos_user.yaml
 
@@ -224,6 +225,7 @@ fos_user:
 
 \end{lstlisting}
 
+\newpage
 \subsubsection{API-Platform}%
 \label{ssub:api_platform}
 
@@ -237,6 +239,7 @@ que no se quieran exponer a los usuarios. Además, se pueden encontrar referenci
 y roles de proyecto (un miembro tiene un rol, y un rol tiene muchos miembros)\@.  Por este motivo, se decidió configurar la información que es expuesta a
 través de estas entidades.
 
+\newpage
 \myparagraph{El proceso de serialización}
 
 
@@ -245,7 +248,7 @@ o transmitido (por ejemplo, a través una conexión de red) y reconstruido luego
 
 \begin{figure}[H]
     \includegraphics[width=1\linewidth]{image/serializationWorkflow.png}
-    \caption{El proceso de serialización\newline \textbf{Fuente:} Recuperado de~\url{https://api-platform.com/docs/core/serialization/}}
+    \caption[El proceso de serialización]{El proceso de serialización.\newline \textbf{Fuente:} Recuperado de~https://api-platform.com/docs/core/serialization/}
     \label{fig:image/serializationWorkflow}
 \end{figure}
 

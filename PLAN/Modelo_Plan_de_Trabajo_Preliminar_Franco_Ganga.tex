@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 
-\usepackage[headheight=26pt, footskip=60pt]{geometry}% http://ctan.org/pkg/geometry
+\usepackage[headheight=26pt, textheight=7in, footskip=20pt]{geometry}% http://ctan.org/pkg/geometry
 
 \usepackage{lipsum}% http://ctan.org/pkg/lipsum
 \usepackage{fancyhdr}% http://ctan.org/pkg/fanychdr
@@ -20,12 +20,12 @@
 \fancypagestyle{myheader}{%
   \fancyhf{}% clear header/footer
   \fancyhead[L]{
-    \begin{tabular}{|P{7cm}|P{7cm}|}
+    \begin{tabular}{|P{7.1cm}|P{7.1cm}|}
             \hline
             ~ & ~ \\
             \includegraphics[width=5cm]{/home/unaj/unaj-header.png} & Pr\'{a}ctica Profesional Supervisada \\
             Instituto de Ingenier\'{i}a y Agronom\'{i}a Ingenier\'{i}a en Inform\'{a}tica  & \textbf{(PPS)} \\
-            ~ & \multicolumn{1}{|r|}{P\'{a}gina~\thepage~de~\pageref{LastPage}} \\
+            ~ & \multicolumn{1}{r|}{P\'{a}gina~\thepage~de~\pageref{LastPage}} \\
             \hline
         \end{tabular}
   }

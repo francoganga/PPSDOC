@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.13)  9 DEC 2019 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.13)  11 DEC 2019 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,7 +1202,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
-</home/unaj/unaj-header.png, id=112, 1165.35374pt x 303.1325pt>
+</home/unaj/unaj-header.png, id=108, 1165.35374pt x 303.1325pt>
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 198.
@@ -1228,14 +1228,15 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 LaTeX Info: Redefining \sptext on input line 2.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 82.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [3])
+)
 \tf@toc=\write6
 \openout6 = `Informe_FINAL_Franco_Ganga.toc'.
 
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 234.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+ [3]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 234.
@@ -1255,88 +1256,89 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 20.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [6] (./Modelado.tex
-<image/entidad-doctrine.png, id=177, 322.95656pt x 197.98969pt>
+<image/entidad-doctrine.png, id=172, 322.95656pt x 197.98969pt>
 File: image/entidad-doctrine.png Graphic file (type png)
 <use image/entidad-doctrine.png>
-Package pdftex.def Info: image/entidad-doctrine.png  used on input line 13.
+Package pdftex.def Info: image/entidad-doctrine.png  used on input line 21.
 (pdftex.def)             Requested size: 430.00462pt x 263.6281pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 18.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 26.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [7]
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 33.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-
-[8 <./image/entidad-doctrine.png (PNG copy)>]
-<image/actividad-modelo.png, id=191, 340.27126pt x 204.01219pt>
+<image/actividad-modelo.png, id=179, 340.27126pt x 204.01219pt>
 File: image/actividad-modelo.png Graphic file (type png)
 <use image/actividad-modelo.png>
-Package pdftex.def Info: image/actividad-modelo.png  used on input line 35.
+Package pdftex.def Info: image/actividad-modelo.png  used on input line 36.
 (pdftex.def)             Requested size: 340.27042pt x 204.01169pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 49.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 41.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+
+[8 <./image/entidad-doctrine.png (PNG copy)>]
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 58.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [9 <./image/actividad-modelo.png (PNG copy)>]
-<image/discriminator-doctrine.png, id=198, 398.99063pt x 174.6525pt>
+<image/discriminator-doctrine.png, id=192, 398.99063pt x 174.6525pt>
 File: image/discriminator-doctrine.png Graphic file (type png)
 <use image/discriminator-doctrine.png>
-Package pdftex.def Info: image/discriminator-doctrine.png  used on input line 5
-8.
+Package pdftex.def Info: image/discriminator-doctrine.png  used on input line 6
+0.
 (pdftex.def)             Requested size: 430.00462pt x 188.23813pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 62.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 64.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [10 <./image/discriminator-doctrine.png (PNG copy)>]
-<image/discr.png, id=205, 481.8pt x 91.84312pt>
+<image/discr.png, id=199, 481.8pt x 91.84312pt>
 File: image/discr.png Graphic file (type png)
 <use image/discr.png>
-Package pdftex.def Info: image/discr.png  used on input line 66.
+Package pdftex.def Info: image/discr.png  used on input line 68.
 (pdftex.def)             Requested size: 430.00462pt x 81.97133pt.
-<image/mpr-new.png, id=206, 210.48637pt x 105.69487pt>
+<image/mpr-new.png, id=200, 210.48637pt x 105.69487pt>
 File: image/mpr-new.png Graphic file (type png)
 <use image/mpr-new.png>
-Package pdftex.def Info: image/mpr-new.png  used on input line 80.
+Package pdftex.def Info: image/mpr-new.png  used on input line 82.
 (pdftex.def)             Requested size: 430.00462pt x 215.94203pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<image/miembros.png, id=207, 505.13719pt x 197.23688pt>
+<image/miembros.png, id=201, 505.13719pt x 197.23688pt>
 File: image/miembros.png Graphic file (type png)
 <use image/miembros.png>
-Package pdftex.def Info: image/miembros.png  used on input line 86.
+Package pdftex.def Info: image/miembros.png  used on input line 88.
 (pdftex.def)             Requested size: 430.00462pt x 167.90192pt.
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 92.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+[11 <./image/discr.png (PNG copy)>]
+Overfull \vbox (3.92622pt too high) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 92.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
 
+[12 <./image/mpr-new.png> <./image/miembros.png (PNG copy)>])
+(./Definicion_AMBs.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 103.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 12.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[11 <./image/discr.png (PNG copy)>]) (./Definicion_AMBs.tex
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 2.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [12 <./image/mpr-new.png>]
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 16.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [13 <./image/miembros.png (PNG copy)>]
-<image/show.png, id=228, 417.05812pt x 94.10156pt>
+ [13]
+<image/show.png, id=222, 417.05812pt x 94.10156pt>
 File: image/show.png Graphic file (type png)
 <use image/show.png>
 Package pdftex.def Info: image/show.png  used on input line 39.
 (pdftex.def)             Requested size: 430.00462pt x 97.02762pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 43.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 42.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [14]
 Underfull \hbox (badness 10000) in paragraph at lines 55--60
@@ -1348,22 +1350,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
-(./lista_entidades_OneToMany.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 2.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 60.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [15 <./image/show.png (PNG copy)>])
+[15 <./image/show.png (PNG copy)>] (./lista_entidades_OneToMany.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 85.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 82.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
 [16]
-<image/edit-proyecto.png, id=248, 456.95718pt x 250.68657pt>
+<image/edit-proyecto.png, id=242, 456.95718pt x 250.68657pt>
 File: image/edit-proyecto.png Graphic file (type png)
 <use image/edit-proyecto.png>
 Package pdftex.def Info: image/edit-proyecto.png  used on input line 92.
@@ -1377,7 +1378,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<image/addChild.png, id=255, 352.31625pt x 108.405pt>
+<image/addChild.png, id=249, 352.31625pt x 108.405pt>
 File: image/addChild.png Graphic file (type png)
 <use image/addChild.png>
 Package pdftex.def Info: image/addChild.png  used on input line 106.
@@ -1414,14 +1415,8 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 149.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [20])
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 26.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [21]
-(./Librerias.tex
-<image/adminLogin.png, id=295, 398.23781pt x 381.67593pt>
+ [20]) (./Librerias.tex
+<image/adminLogin.png, id=278, 398.23781pt x 381.67593pt>
 File: image/adminLogin.png Graphic file (type png)
 <use image/adminLogin.png>
 Package pdftex.def Info: image/adminLogin.png  used on input line 20.
@@ -1430,124 +1425,118 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 24.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [22]
+[21]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 29.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 25.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [23 <./image/adminLogin.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+ [22 <./image/adminLogin.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 57.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 53.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 79.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 86.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 114.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 118.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 141.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
 [26]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 139.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 175.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [27]
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 173.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [28]
-<image/acl.png, id=420, 429.10312pt x 139.27031pt>
+<image/acl.png, id=409, 429.10312pt x 139.27031pt>
 File: image/acl.png Graphic file (type png)
 <use image/acl.png>
-Package pdftex.def Info: image/acl.png  used on input line 179.
+Package pdftex.def Info: image/acl.png  used on input line 181.
 (pdftex.def)             Requested size: 430.00462pt x 139.56534pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 201.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 203.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[29 <./image/acl.png>]
+[28 <./image/acl.png>]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 207.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 228.
+(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
+ [29]
+File: /home/unaj/unaj-header.png Graphic file (type png)
+<use /home/unaj/unaj-header.png>
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 242.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
  [30]
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 240.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [31]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-<image/serializationWorkflow.png, id=465, 862.22125pt x 391.4625pt>
+<image/serializationWorkflow.png, id=453, 862.22125pt x 391.4625pt>
 File: image/serializationWorkflow.png Graphic file (type png)
 <use image/serializationWorkflow.png>
-Package pdftex.def Info: image/serializationWorkflow.png  used on input line 24
-7.
+Package pdftex.def Info: image/serializationWorkflow.png  used on input line 25
+0.
 (pdftex.def)             Requested size: 430.00462pt x 195.229pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 261.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 264.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[32 <./image/serializationWorkflow.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+[31 <./image/serializationWorkflow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
-)
+) (./VistaPersona.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 29.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 8.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [33]
-File: /home/unaj/unaj-header.png Graphic file (type png)
-<use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 29.
-(pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [34] (./VistaPersona.tex
+ [32]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 33.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [35]
+ [33]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 63.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [36]
+ [34]
 Overfull \hbox (21.4676pt too wide) in paragraph at lines 75--77
 \T1/ptm/m/n/12 de-no-mi-na-do \T1/ptm/b/n/12 stan-dard_layout \T1/ptm/m/n/12 y 
 se so-bres-cri-bió la sec-ción o el blo-que \T1/ptm/b/n/12 so-na-ta_admin_conte
@@ -1558,7 +1547,7 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 94.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[37]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
@@ -1572,21 +1561,21 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 124.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[38]
-<image/vista_persona.png, id=551, 423.08063pt x 330.48468pt>
+[36]
+<image/vista_persona.png, id=534, 423.08063pt x 330.48468pt>
 File: image/vista_persona.png Graphic file (type png)
 <use image/vista_persona.png>
-Package pdftex.def Info: image/vista_persona.png  used on input line 136.
+Package pdftex.def Info: image/vista_persona.png  used on input line 135.
 (pdftex.def)             Requested size: 430.00462pt x 335.90486pt.
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 140.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 139.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [39]
-<image/grid.png, id=560, 642.4pt x 401.5pt>
+ [37]
+<image/grid.png, id=544, 642.4pt x 401.5pt>
 File: image/grid.png Graphic file (type png)
 <use image/grid.png>
-Package pdftex.def Info: image/grid.png  used on input line 143.
+Package pdftex.def Info: image/grid.png  used on input line 142.
 (pdftex.def)             Requested size: 430.00462pt x 268.75853pt.
 
 
@@ -1595,38 +1584,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 )
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 31.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 29.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [40 <./image/vista_persona.png (PNG copy)>] (./Integracion.tex
+ [38 <./image/vista_persona.png (PNG copy)>] (./Integracion.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 12.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 1.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [41 <./image/grid.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+ [39 <./image/grid.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 35.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 27.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[42]
+[40]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 66.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 60.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [43])) (./Conclusion.tex
+ [41])) (./Conclusion.tex
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
-Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 21.
+Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 11.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [44]
+ [42]
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 42.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [45]
+ [43]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
@@ -1640,12 +1629,12 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 82.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[46])
+[44])
 File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 246.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
- [47]
+ [45]
 Overfull \hbox (24.95563pt too wide) in paragraph at lines 249--249
 [][]\T1/ptm/m/n/12 EighPointsGuzzle. (2019). Re-cu-pe-ra-do des-de [][]$https :
  / / github . com / 8p / EightPointsGuzzleBundle #
@@ -1655,7 +1644,7 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 250.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[48] (./Informe_FINAL_Franco_Ganga.lof
+[46] (./Informe_FINAL_Franco_Ganga.lof
 LaTeX Info: Redefining \sptext on input line 2.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
@@ -1669,7 +1658,7 @@ File: /home/unaj/unaj-header.png Graphic file (type png)
 <use /home/unaj/unaj-header.png>
 Package pdftex.def Info: /home/unaj/unaj-header.png  used on input line 257.
 (pdftex.def)             Requested size: 142.26378pt x 37.00339pt.
-[49]
+[47]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (./Informe_FINAL_Franco_Ganga.aux
@@ -1679,41 +1668,31 @@ LaTeX Info: Redefining \% on input line 28.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
-
-
-Package rerunfilecheck Warning: File `Informe_FINAL_Franco_Ganga.out' has chang
-ed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Informe_FINAL_Franco_Ganga.out':
-(rerunfilecheck)             Before: 2F463D030B1FF58D6A601241E89C5556;1941
-(rerunfilecheck)             After:  062C8B7252D4BD297EFC839BCC5D6FFD;1894.
+Package rerunfilecheck Info: File `Informe_FINAL_Franco_Ganga.out' has not chan
+ged.
+(rerunfilecheck)             Checksum: 062C8B7252D4BD297EFC839BCC5D6FFD;1894.
 Package logreq Info: Writing requests to 'Informe_FINAL_Franco_Ganga.run.xml'.
 \openout1 = `Informe_FINAL_Franco_Ganga.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19365 strings out of 494861
- 310670 string characters out of 6178803
- 978301 words of memory out of 5000000
- 22100 multiletter control sequences out of 15000+600000
+ 19358 strings out of 494861
+ 310542 string characters out of 6178803
+ 978236 words of memory out of 5000000
+ 22096 multiletter control sequences out of 15000+600000
  41659 words of font info for 56 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 53i,24n,92p,1171b,2171s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist
-, replaced by a fixed one
-
- </home/unaj/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk>
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on Informe_FINAL_Franco_Ganga.pdf (49 pages, 584479 bytes).
+ 53i,24n,92p,1171b,2035s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/unaj/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600p
+k>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on Informe_FINAL_Franco_Ganga.pdf (47 pages, 582287 bytes).
 PDF statistics:
- 801 PDF objects out of 1000 (max. 8388607)
- 651 compressed objects within 7 object streams
- 265 named destinations out of 1000 (max. 500000)
- 292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 782 PDF objects out of 1000 (max. 8388607)
+ 634 compressed objects within 7 object streams
+ 262 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
