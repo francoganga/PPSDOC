@@ -45,36 +45,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Security}{26}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Generaci\IeC {\'o}n de entidades finales}{28}{section*.22}
+\contentsline {paragraph}{Generaci\IeC {\'o}n de entidades finales}{29}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.2}API-Platform}{30}{subsubsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.2}API-Platform}{31}{subsubsection.1.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{El proceso de serializaci\IeC {\'o}n}{31}{section*.23}
+\contentsline {paragraph}{El proceso de serializaci\IeC {\'o}n}{32}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Modificaci\IeC {\'o}n del proceso de serializaci\IeC {\'o}n}{32}{section*.25}
+\contentsline {paragraph}{Modificaci\IeC {\'o}n del proceso de serializaci\IeC {\'o}n}{33}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.3}Guzzle y EightPointsGuzzle}{32}{subsubsection.1.4.3}
+\contentsline {subsubsection}{\numberline {1.4.3}Guzzle y EightPointsGuzzle}{33}{subsubsection.1.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5}Vista de Persona}{33}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.5}Vista de Persona}{34}{subsection.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.1}Introducci\IeC {\'o}n Twig}{33}{subsubsection.1.5.1}
+\contentsline {subsubsection}{\numberline {1.5.1}Introducci\IeC {\'o}n Twig}{34}{subsubsection.1.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.2}Estilo}{33}{subsubsection.1.5.2}
+\contentsline {subsubsection}{\numberline {1.5.2}Estilo}{34}{subsubsection.1.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.3}Template}{35}{subsubsection.1.5.3}
+\contentsline {subsubsection}{\numberline {1.5.3}Template}{36}{subsubsection.1.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.4}Obtenci\IeC {\'o}n de rutas}{36}{subsubsection.1.5.4}
+\contentsline {subsubsection}{\numberline {1.5.4}Obtenci\IeC {\'o}n de rutas}{37}{subsubsection.1.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6}Integraci\IeC {\'o}n}{40}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.6}Integraci\IeC {\'o}n}{41}{subsection.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.1}Eventos}{40}{subsubsection.1.6.1}
+\contentsline {subsubsection}{\numberline {1.6.1}Eventos}{41}{subsubsection.1.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Doctrine}{40}{section*.28}
+\contentsline {paragraph}{Doctrine}{41}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.2}Implementaci\IeC {\'o}n}{41}{subsubsection.1.6.2}
+\contentsline {subsubsection}{\numberline {1.6.2}Implementaci\IeC {\'o}n}{42}{subsubsection.1.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.3}Rendimiento}{42}{subsubsection.1.6.3}
+\contentsline {subsubsection}{\numberline {1.6.3}Rendimiento}{43}{subsubsection.1.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.4}Inserci\IeC {\'o}n de Personas}{42}{subsubsection.1.6.4}
+\contentsline {subsubsection}{\numberline {1.6.4}Inserci\IeC {\'o}n de Personas}{43}{subsubsection.1.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Conclusi\IeC {\'o}n}{43}{section.2}
+\contentsline {section}{\numberline {2}Conclusi\IeC {\'o}n}{44}{section.2}

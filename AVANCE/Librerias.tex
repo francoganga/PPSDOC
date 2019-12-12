@@ -100,6 +100,7 @@ fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 \end{lstlisting}
 
+\newpage
 \begin{lstlisting}[caption={archivo de configuración de rutas de sonata-user\\Fuente: \sonatainstallation.}]
 #src/config/routes/sonata_user.yaml
 
@@ -118,6 +119,7 @@ sonata_user_admin_resetting:
 En cuanto a la configuración de seguridad, se definieron dos sistemas de autenticación (denominados firewall)\@. Uno se encargará de administrar la seguridad en
 los usuarios admin y el otro en usuarios básicos.
 
+\newpage
 \begin{lstlisting}[caption={Firewall para el área admin del sistema.\\Fuente: \sonatainstallation.}]
 #src/config/packages/security.yaml
 
@@ -195,6 +197,7 @@ bin/console sonata:easy-extends:generate SonataUserBundle --dest=src --namespace
 Esto da como resultado un directorio en \textbf{Application\textbackslash Sonata\textbackslash UserBundle} el cual contiene las entidades a utilizar por las librerías.
 Por último, se configuró Sonata-User y FOSUser para que utilicen las nuevas entidades:
 
+\newpage
 \begin{lstlisting}[caption={Archivo de configuración de Sonata-User.\\Fuente: \sonatainstallation}]
 #src/config/packages/sonata_user.yaml
 
